@@ -1,3 +1,0 @@
-```{r child, child = '1.md'}
-
-```

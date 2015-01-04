@@ -1,9 +1,0 @@
-```{r child, child = 'index.md'}
-
-```
-
-
-
-
-
-
