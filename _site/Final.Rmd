@@ -1,4 +1,0 @@
-```{r child, child = 'Final.md'}
-
-```
-
