@@ -17,29 +17,29 @@ Meeting|Week|Class | Topic   | Reading | Assignment |
 05 Jan |1   |1 |Overview |AMA 1|  |     
 08 Jan |    |2 |Multivariate Methods History;  **Lab 1 : R Intro** |  |  |  
 12 Jan |2   |3 |Matrix Algebra  |AMA 2|  |      
-15 Jan |   	|4 |**Lab 2 : matrix algebra: basic operations**  |  |Matrix Algebra *assigned*|  
+15 Jan |   	|4 |**Lab 2 : matrix algebra: basic operations**  |  |HM1 Matrix Algebra *assigned*|  
 19 Jan |3	  |5 |Review Univariate GLM                       | |  |  
-22 Jan |	  |6 |**Lab 3 : Matrix Algebra to GLM**  |  | Matrix Algebra **due Jan 23**|  
+22 Jan |	  |6 |**Lab 3 : Matrix Algebra to GLM**  |  |HM1 Matrix Algebra **due Jan 23**|  
 26 Jan |4	  |7 |Eigenvalues & Eigenvectors                    |  |  |   	
-29 Jan |	  |8 |**Lab 4 : Eigenvalues, decomposition, & inverses**  |  |Eigen & EDA *assigned* |
+29 Jan |	  |8 |**Lab 4 : Eigenvalues, decomposition, & inverses**  |  |HM2 Eigen & EDA *assigned* |
 02 Feb |5	  |9 |Missing data & data screening    |AMA 3, 12|  |  	
-05 Feb |	  |10|**Lab 5 : EDA & data prep** |  |Eigen & EDA **due Feb 6** |
+05 Feb |	  |10|**Lab 5 : EDA & data prep** |  |HM2 Eigen & EDA **due Feb 6** |
 09 Feb |6	  |  |Reading Week	|  | |  	
 13 Feb | 	  |  |Reading Week  |  | |  				
 16 Feb |7	  |11|Principal Components Analysis                                       | AMA 7|  |  
 19 Jan |	  |12|PCA/ Common Factor Models | AMA 8 ||  
 23 Feb |8	  |13|Common Factor Models (EFA)                            | |  |  	
-26 Feb |	  |14|**Lab 6 : EFA**  |  |PCA & EFA *assigned* |  
+26 Feb |	  |14|**Lab 6 : EFA**  |  |HM3 PCA & EFA *assigned* |  
 02 Mar |9	  |15|Confirmatory Factor Analysis  | AMA 9, SEM 4 |  |  	
-05 Mar |	  |16|CFA  |  |PCA & EFA **due Mar 6** |  
+05 Mar |	  |16|CFA  |  |HM3 PCA & EFA **due Mar 6** |  
 09 Mar |10  |17|Hypothesis Testing                |SEM 1|  |  	
-12 Mar |	  |18|**Lab 7 : CFA**  |  SEM 2 (as needed)|CFA *assigned* |  
+12 Mar |	  |18|**Lab 7 : CFA**  |  SEM 2 (as needed)|HM4 CFA *assigned* |  
 16 Mar |11  |19|Path Analysis                                        | SEM 3|  |  	
-19 Mar |	  |20|Path Analysis / SEM  | SEM 5 |CFA  **due Mar 20**|  
+19 Mar |	  |20|Path Analysis / SEM  | SEM 5 |HM4 CFA  **due Mar 20**|  
 23 Mar |12  |21|SEM                                        | |  |  	
-26 Mar |	  |22|**Lab 8 : SEM**  |  |SEM *assigned*|  
+26 Mar |	  |22|**Lab 8 : SEM**  |  |HM5 SEM *assigned*|  
 30 Mar |13  |23|More SEM  |  |  |  	
-02 Apr |    |24|Wrap Up  |  |SEM **due Apr 2**  |  
+02 Apr |    |24|Wrap Up  |  |HM5 SEM **due Apr 2**  |  
 
 
 
@@ -65,11 +65,11 @@ Learning statistical methods is like learning a language. One course will improv
 Evaluation Format|Weight |Due Date | 
 -----------------|-------|---------|
 Assignments		| | | 
-1 |	10 |	Jan  23 |
-2 |	10 |	Feb 6 |
-3 |	10 |	Mar 6 |
-4 |	10 |	Mar 20 |
-5 |	10 |	Apr 2 |
+HM1 |	10 |	Jan  23 |
+HM2 |	10 |	Feb 6 |
+HM3 |	10 |	Mar 6 |
+HM4 |	10 |	Mar 20 |
+HM5 |	10 |	Apr 2 |
 Exams  | | |        
 Midterm  |	25 |	Feb  19 |
 Final | 25	| Apr 9 |
