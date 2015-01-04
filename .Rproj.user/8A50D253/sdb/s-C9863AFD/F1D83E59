@@ -1,0 +1,16 @@
+{
+    "contents" : "```{r child, child = 'index.md'}\n\n```\n\n\n\n\n\n\n",
+    "created" : 1420408251287.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4236388031",
+    "id" : "F1D83E59",
+    "lastKnownWriteTime" : 1420409147,
+    "path" : "~/GitHub/psy533/_site/index.Rmd",
+    "project_path" : "_site/index.Rmd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
