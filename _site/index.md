@@ -57,7 +57,7 @@ This course will introduce you to a variety of multivariate techniques, primaril
 
 ### Course Objectives
 
-Learning statistical methods is like learning a language. One course will improve your ability to read and understand other people’s work. Becoming comfortable with the methods will require your use of them with data meaningful to you. In this course we will work on understanding when, why and how to implement a particular analysis, as well as how to interpret the product of the analysis.  Assignments are intended to help you become more comfortable with using syntax in statistical analysis software. 
+Learning statistical methods is like learning a language. One course will improve your ability to read and understand other peoples work. Becoming comfortable with the methods will require your use of them with data meaningful to you. In this course we will work on understanding when, why and how to implement a particular analysis, as well as how to interpret the product of the analysis.  Assignments are intended to help you become more comfortable with using syntax in statistical analysis software. 
 
 
 ### Evaluation
@@ -80,15 +80,17 @@ Final | 25	| Apr 9 |
 
 Grade | Lowest  | Highest | Description
 ------|--------|---------|------------
-A+|90|100|exceptional
-A |85|89 |excellent
-A-|80|84 |strongly competent     
-B+|77|79 |competent
-B |73|76 |barely competent
-B-|70|72 |incompetent
-C+|65|69 |incompetent
-C |60|64 |incompetent
-D |50|59 |incompetent  
-F  | 0|49 |incompetent 
+A+|90|100|Exceptional Work   Technically flawless and original work demonstrating insight, understanding and independent application or extension of course expectations; often publishable. 
+A |85|89 |Outstanding Work   Demonstrates a very high level of integration of material demonstrating insight, understanding and independent application or extension of course expectations. 
+A-|80|84 |Excellent Work   Represents a high level of integration, comprehensiveness and complexity, as well as mastery of relevant techniques/concepts.      
+B+|77|79 |Very good work   Represents a satisfactory level of integration, comprehensiveness, and complexity; demonstrates a sound level of analysis with no major weaknesses. 
+B |73|76 |Acceptable work that fulfills the expectations of the course   Represents a satisfactory level of integration of key concepts/procedures. However, comprehensiveness or technical skills may be lacking. 
+B-|70|72 |Unacceptable work
+C+|65|69 |Unacceptable work
+C |60|64 |Unacceptable work
+D |50|59 |Unacceptable work  
+F  | 0|49 |Failing grade   Unsatisfactory performance. Wrote final examination and completed course requirements. 
+
+For details consult the [official grading system](http://web.uvic.ca/calendar2012/GRAD/FARe/Grad.html) used by the Faculty of Graduate Studies.
 
 
