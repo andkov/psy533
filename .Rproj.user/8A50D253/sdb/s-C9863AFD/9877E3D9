@@ -1,12 +1,12 @@
 {
-    "contents" : "[edit page](https://github.com/andkov/psy533/edit/gh-pages/1.md)\n\n\n## Plan for the week \n\nDecember/January\n\n  . | Mon  | Tue  | Wed  | Thu  | Fri  | .     \n----|------|------|------|------|------|----\n28  | 29   | 30   | 31   | 1    | 2    |  3  \n4   |**5** | 6    | 7    |**8** |  9   | 10   \n11  | 12   | 13   | 14   | 15   | 16   | 17  \n\n\n### Monday\nOverview\n\n### Thursday \nMultivariate Methods History   \n</br>\n**Lab 1** - Introduction to R and RStudio\n\n#### Homework \nnone\n\n\n### Learning objectives: Concepts\n\n\n#### Basic\n- Know how to install R & RStudio \n- objective 3  \n\n#### Intermediate  \n- objective 1  \n- objective 2  \n\n#### Advanced \n- objective 1     \n\n\n### Learning objectives: Skills \n\n\n#### Basic\n- objective 1  \n- objective 2  \n- objective 3  \n\n#### Intermediate  \n- objective 1  \n- objective 2  \n\n#### Advanced \n- objective 1 \n\n",
+    "contents" : "[edit page](https://github.com/andkov/psy533/edit/gh-pages/1.md)\n\n\n## Plan for the week \n\nDecember/January\n\n  . | Mon  | Tue  | Wed  | Thu  | Fri  | .     \n----|------|------|------|------|------|----\n28  | 29   | 30   | 31   | 1    | 2    |  3  \n4   |**5** | 6    | 7    |**8** |  9   | 10   \n11  | 12   | 13   | 14   | 15   | 16   | 17  \n\n\n### Monday\nOverview\n\n### Thursday \nMultivariate Methods History   \n</br>\n**Lab 1** - Introduction to R and RStudio\n\n#### Homework \nnone\n\n\n### Learning objectives: Concepts\n\n\n#### Basic\n\n- objective 2 \n- objective 3  \n\n#### Intermediate  \n- objective 1  \n- objective 2  \n\n#### Advanced \n- objective 1     \n\n\n### Learning objectives: Skills \n\n\n#### Basic\n- objective 1  \n- objective 2  \n- objective 3  \n\n#### Intermediate  \n- objective 1  \n- objective 2  \n\n#### Advanced \n- objective 1 \n\n\n### Monday: Overview \n\nWhat are Multivariate Methods(MM)? Classifications. 1st generation. 2nd generation. New umbrella: Canonical Correlation -> Structural Equation Modeling. Multiple variables, dimensions, perspectives. Knife example. Reduce dimensions. Explore prespectives. \n\nMM is GLM with multiple outcomes. MM: Reduces number of DVs, improves measurement,  test theories. MM:  control type I error, relates DVs,  greater power, interpretations of DVs combination.\n\nGIGO. Garbage in = garbage out. Human mind will find patterns even in randomness.  Taxonomical approach to MM could be (?) confusing.  SEM took over multivariate hypothesis testing. Table of distinctions among MM. Fundamental matrices.\n\n\n### Review Questions\n\n",
     "created" : 1420434578785.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "41678627",
+    "hash" : "1442951640",
     "id" : "9877E3D9",
-    "lastKnownWriteTime" : 1420436064,
+    "lastKnownWriteTime" : 1420493866,
     "path" : "~/GitHub/psy533/1.md",
     "project_path" : "1.md",
     "properties" : {
