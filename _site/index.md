@@ -6,7 +6,7 @@
 Instructor | Dr. Andrea Piccinin | Dr. Andrey Koval
 --- | --- | ---
 Office       | Cornett A263 | Cornett B335d
-Hours | T 4-5, Th 3:30-4:30	  | Th 2:30-3:30
+Hours | T 4-5, Th 3:30-4:30	  | T 2:30-3:30 or by appointment 
 Email | piccinin at uvic dot ca | andkov at uvic dot ca
 Phone | 853-3861 | 853-3862
 
