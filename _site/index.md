@@ -46,9 +46,9 @@ Meeting|Week|Class | Topic   | Reading | Assignment |
 
 ### Texts
 
-- [An Introduction to Applied Multivariate Analysis](http://fcc-statistics.wikispaces.com/file/view/An+Introduction+to+Applied+Multivariate+Analysis+By+Tenko+Raykov,+George+A.+Marcoulides.pdf) (Raykov, T. & Marcoulides, G.A , 2008. New York, NY: Routledge)
+- [An Introduction to Applied Multivariate Analysis]() by Raykov, T. & Marcoulides, G.A , 2008. New York, NY: Routledge
 
-- [A First Course in Structural Equation Modeling](http://www.rmcs.buu.ac.th/drpoonpong/file/A_First_Course_in_Structural_Equation_Modeling__2nd_edition.pdf) (Raykov, T. & Marcoulides, G.A ,2006. Mahwah, NJ: Lawrence Erlbaum Associates, Inc.)
+- [A First Course in Structural Equation Modeling]() by Raykov, T. & Marcoulides, G.A ,2006. Mahwah, NJ: Lawrence Erlbaum Associates, Inc.
 
 
 ### Course Description
