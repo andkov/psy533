@@ -57,7 +57,7 @@ This course will introduce you to a variety of multivariate techniques, primaril
 
 ### Course Objectives
 
-Learning statistical methods is like learning a language. One course will improve your ability to read and understand other people’s work. Becoming comfortable with the methods will require your use of them with data meaningful to you. In this course we will work on understanding when, why and how to implement a particular analysis, as well as how to interpret the product of the analysis.  Assignments are intended to help you become more comfortable with using syntax in statistical analysis software. 
+Learning statistical methods is like learning a language. One course will improve your ability to read and understand other peoples work. Becoming comfortable with the methods will require your use of them with data meaningful to you. In this course we will work on understanding when, why and how to implement a particular analysis, as well as how to interpret the product of the analysis.  Assignments are intended to help you become more comfortable with using syntax in statistical analysis software. 
 
 
 ### Evaluation
