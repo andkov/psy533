@@ -1,0 +1,17 @@
+{
+    "contents" : "install.packages(\"swirl\")\ninstall.packages(\"Rtools\")\ninstall.packages(\"devtools\")\ndevtools::install_github(c(\"swirldev/swirl\", \"swirldev/swirlify\"))\nlibrary(swirlify)\nsw",
+    "created" : 1420661213425.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "54619385",
+    "id" : "E4A1FF2E",
+    "lastKnownWriteTime" : 1420564267,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
