@@ -1,75 +1,4 @@
-[edit page](https://github.com/andkov/psy533/edit/gh-pages/1.md)
-
-
-## Plan for the week 
-
-December/January
-
-  . | Mon  | Tue  | Wed  | Thu  | Fri  | .     
-----|------|------|------|------|------|----
-28  | 29   | 30   | 31   | 1    | 2    |  3  
-4   |**5** | 6    | 7    |**8** |  9   | 10   
-11  | 12   | 13   | 14   | 15   | 16   | 17  
-
-
-### Monday
-Overview
-
-### Thursday 
-Multivariate Methods History   
-</br>
-**Lab 1** - Introduction to R and RStudio
-
-#### Homework 
-none
-
-
-### Learning objectives: Concepts
-
-
-#### Basic
-
-- objective 2 
-- objective 3  
-
-#### Intermediate  
-- objective 1  
-- objective 2  
-
-#### Advanced 
-- objective 1     
-
-
-### Learning objectives: Skills 
-
-
-#### Basic
-- add emphasis in markdown (**bold** and *italics*)
-- make headings of different types in markdown 
-- create and combine vectors in R
-- perform numeric operations with in R
-
-
-#### Intermediate  
-- name elements of the vector
-- recycle vector of smaller size
-- link images and webpages in markdown
-
-#### Advanced 
- - recall commands in the console
- - change the color scheme of R studio
-
-
-## Monday: Overview 
-
-What are Multivariate Methods(MM)? Classifications. 1st generation. 2nd generation. New umbrella: Canonical Correlation -> Structural Equation Modeling. Multiple variables, dimensions, perspectives. Knife example. Reduce dimensions. Explore prespectives. 
-
-MM is GLM with multiple outcomes. MM: Reduces number of DVs, improves measurement,  test theories. MM:  control type I error, relates DVs,  greater power, interpretations of DVs combination.
-
-GIGO. Garbage in = garbage out. Human mind will find patterns even in randomness.  Taxonomical approach to MM could be (?) confusing.  SEM took over multivariate hypothesis testing. Table of distinctions among MM. Fundamental matrices.
-
-
-## Thursday: Introduction to R and RStudio
+## Introduction to R and RStudio
 
 ### The working metaphor
 
@@ -141,6 +70,13 @@ Follow the prompt and complete the first lesson.
 
 I also recommend completing two free interactive courses at DataCamp: [Introduction to R](https://www.datacamp.com/courses/introduction-to-r) and [Data Analysis and Statistical Inference](https://www.datacamp.com/courses/data-analysis-and-statistical-inference_mine-cetinkaya-rundel-by-datacamp). Their content partially overlaps with the training by two availible courses by [swirl](http://swirlstats.com/students.html) package, but gives a different take and examples. 
 
+
+### More Resources
+ - for brief reviews of key books and resources see Will Beasley's [Resources Opinions](https://github.com/OuhscBbmc/RedcapExamplesAndPatterns/blob/master/DocumentationGlobal/ResourcesOpinions.md)
+ - another presentation by Will will give you a excellent overview of [Statistical Collaboration with GitHub](http://htmlpreview.github.io/?https://raw.githubusercontent.com/OuhscBbmc/StatisticalComputing/master/2014_Presentations/05_May/BeasleyScugGitHub2014-05.html#/)
+ - Winston Chan's [R Cookbook](http://shop.oreilly.com/product/9780596809164.do) is a perfect book to get you started with producing graphs with RStudio
+ - [Quick-R](http://www.statmethods.net/) - thorough and convenient resource for R reference
+
 ### FOR INSPIRATION:  
   
   Working with data is becoming its own science:    
@@ -150,4 +86,4 @@ I also recommend completing two free interactive courses at DataCamp: [Introduct
    
    It's also becoming a high art:  
    - [Bostock](http://bost.ocks.org/mike/)  
-   - [D3](https://github.com/mbostock/d3/wiki/Gallery)  
+   - [D3](https://github.com/mbostock/d3/wiki/Gallery)
