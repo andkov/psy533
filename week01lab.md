@@ -1,4 +1,4 @@
-##Introduction to R and RStudio
+## Introduction to R and RStudio
 
 ### The working metaphor
 
@@ -68,14 +68,15 @@ library(swirlify)
 
 Follow the prompt and complete the first lesson.
 
+I also recommend completing two free interactive courses at DataCamp: [Introduction to R](https://www.datacamp.com/courses/introduction-to-r) and [Data Analysis and Statistical Inference](https://www.datacamp.com/courses/data-analysis-and-statistical-inference_mine-cetinkaya-rundel-by-datacamp). Their content partially overlaps with the training by two availible courses by [swirl](http://swirlstats.com/students.html) package, but gives a different take and examples. 
 
 ### FOR INSPIRATION:  
   
   Working with data is becoming its own science:    
-  - [Coursera](https://www.coursera.org/specialization/jhudatascience/1)  
+- [Coursera](https://www.coursera.org/specialization/jhudatascience/1)  
 - [DataCamp](https://www.datacamp.com/)  
 - [O'Reilly](http://shop.oreilly.com/product/0636920034834.do)  
    
    It's also becoming a high art:  
-     - [Bostock](http://bost.ocks.org/mike/)  
-   - [D3](https://github.com/mbostock/d3/wiki/Gallery)  
+   - [Bostock](http://bost.ocks.org/mike/)  
+   - [D3](https://github.com/mbostock/d3/wiki/Gallery)
