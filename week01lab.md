@@ -1,61 +1,9 @@
-[edit page](https://github.com/andkov/psy533/edit/gh-pages/1.md)
+html_document:
+  self_contained: true
 
-
-## Plan for the week 
-
-December/January
-
-  . | Mon  | Tue  | Wed  | Thu  | Fri  | .     
-----|------|------|------|------|------|----
-28  | 29   | 30   | 31   | 1    | 2    |  3  
-4   |**5** | 6    | 7    |**8** |  9   | 10   
-11  | 12   | 13   | 14   | 15   | 16   | 17  
-
-
-### Monday
-Overview
-
-### Thursday 
-Multivariate Methods History   
-</br>
-**Lab 1** - Introduction to R and RStudio
-
-#### Homework 
-none
-
-
-### Learning objectives: Concepts
-
-
-#### Basic
-
-- objective 2 
-- objective 3  
-
-#### Intermediate  
-- objective 1  
-- objective 2  
-
-#### Advanced 
-- objective 1     
-
-
-### Learning objectives: Skills 
-
-
-#### Basic
-- Distinction between univariate and multivariate  
-- objective 2  
-- objective 3  
-
-#### Intermediate  
-- objective 1  
-- objective 2  
-
-#### Advanced 
-- objective 1 
-
-
+---
+## Week 1 : Jan 5 - Jan 9, 2015
+---
 ### Monday: Overview 
 
 What are Multivariate Methods(MM)? Classifications. 1st generation. 2nd generation. New umbrella: Canonical Correlation -> Structural Equation Modeling. Multiple variables, dimensions, perspectives. Knife example. Reduce dimensions. Explore prespectives. 
@@ -74,20 +22,20 @@ Scientists work with data.
 Journalists tell stories.   
 **Data journalists** tell stories of their data.  
 They do with with **COMPUTER CODE**
-
-START WITH [a markdown simulator](https://demo.ocpu.io/markdownapp/www/). This Javascript app by  [Jeroen Ooms](mailto:jeroenooms@gmail.com) shows how computer code can be used to create an electronic report.      
+  
+  START WITH [a markdown simulator](https://demo.ocpu.io/markdownapp/www/). This Javascript app by  [Jeroen Ooms](mailto:jeroenooms@gmail.com) shows how computer code can be used to create an electronic report.      
 
 
 **markdown** language uses special combinations of characters to make text strings appear differently: in bold, italics, as a heading, or as a name of the column in the table. This language is very simple and straightforward, but may take a little bid to get used to. To help you get proficient with markdown consider some of the following resources.  
 
- - [markdown guide](http://daringfireball.net/projects/markdown/) : a well-written "breaking into" guide. Gives ample verbal description. Recommended for newbies. By John Gruber.  
- - [markdown cheet-sheet](http://support.mashery.com/docs/customizing_your_portal/Markdown_Cheat_Sheet) : brief, simple, parallel view of what the code is doing.By Mashery group.   
- - [markdown in R](http://jeromyanglim.blogspot.ca/2012/05/getting-started-with-r-markdown-knitr.html) : a blog entry on getting started with **rmarkdown** - a version of markdown enchanced for the use with RStudio.  By Jeromy Anglim.
+- [markdown guide](http://daringfireball.net/projects/markdown/) : a well-written "breaking into" guide. Gives ample verbal description. Recommended for newbies. By John Gruber.  
+- [markdown cheet-sheet](http://support.mashery.com/docs/customizing_your_portal/Markdown_Cheat_Sheet) : brief, simple, parallel view of what the code is doing.By Mashery group.   
+- [markdown in R](http://jeromyanglim.blogspot.ca/2012/05/getting-started-with-r-markdown-knitr.html) : a blog entry on getting started with **rmarkdown** - a version of markdown enchanced for the use with RStudio.  By Jeromy Anglim.
 
 
 You will need markdown to complete homework assignments and we won't spend any dedicated lab time on it, so please, pick it up on your own. 
 
- 
+
 ### Goals in Data Science projects
 Adapting reproducible research standards, each project in data science could be conceptualized as having the following objectives:  
 
@@ -102,16 +50,16 @@ Write a computer script that generates an electronic document reporting the stat
 
 
 We'll have the total of **8 LABS**:  
-
-Date|Week|Class | Topic   
+  
+  Date|Week|Class | Topic   
 -------|----|------|--
-08 Jan | 1  |2 |**Lab 1** : Introduction to R   
+  08 Jan | 1  |2 |**Lab 1** : Introduction to R   
 15 Jan | 2  |4 |**Lab 2** : Matrix algebra: basic operations   
 22 Jan | 3  |6 |**Lab 3** : Matrix Algebra to GLM     
 29 Jan | 4  |8 |**Lab 4** : Eigenvalues, decomposition, & inverses  
 05 Feb | 5  |10|**Lab 5** : Exploratory Data Analysis a& data screening  
 ---|---|---|---
-26 Feb | 8  |14|**Lab 6** : Exploratory Factor Analysis (Common factor model)
+  26 Feb | 8  |14|**Lab 6** : Exploratory Factor Analysis (Common factor model)
 12 Mar | 10 |18|**Lab 7** : Confirmatory Factor Analysis
 26 Mar | 12  |22|**Lab 8** : Structural Equation Modeling
 
@@ -121,6 +69,7 @@ As you see, the stories we'll tell will get technical and in addition to markdow
 
 Now we'll use one of the resources mentioned in the link above, [swirl](http://swirlstats.com/students.html).  
 Open your RStudio and execute the following code:  
+
 ```
 install.packages("swirl")  
 install.packages("Rtools")  
@@ -133,15 +82,12 @@ Follow the prompt and complete the first lesson.
 
 
 FOR INSPIRATION:  
-
-Working with data is becoming its own science:    
+  
+  Working with data is becoming its own science:    
   - [Coursera](https://www.coursera.org/specialization/jhudatascience/1)  
-  - [DataCamp](https://www.datacamp.com/)  
-  - [O'Reilly](http://shop.oreilly.com/product/0636920034834.do)  
-  
-It's also becoming a high art:  
-  - [Bostock](http://bost.ocks.org/mike/)  
-  - [D3](https://github.com/mbostock/d3/wiki/Gallery)  
-  
-
-
+- [DataCamp](https://www.datacamp.com/)  
+- [O'Reilly](http://shop.oreilly.com/product/0636920034834.do)  
+   
+   It's also becoming a high art:  
+     - [Bostock](http://bost.ocks.org/mike/)  
+   - [D3](https://github.com/mbostock/d3/wiki/Gallery)  
