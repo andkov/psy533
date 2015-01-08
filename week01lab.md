@@ -1,21 +1,6 @@
-html_document:
-  self_contained: true
+##Introduction to R and RStudio
 
----
-## Week 1 : Jan 5 - Jan 9, 2015
----
-### Monday: Overview 
-
-What are Multivariate Methods(MM)? Classifications. 1st generation. 2nd generation. New umbrella: Canonical Correlation -> Structural Equation Modeling. Multiple variables, dimensions, perspectives. Knife example. Reduce dimensions. Explore prespectives. 
-
-MM is GLM with multiple outcomes. MM: Reduces number of DVs, improves measurement,  test theories. MM:  control type I error, relates DVs,  greater power, interpretations of DVs combination.
-
-GIGO. Garbage in = garbage out. Human mind will find patterns even in randomness.  Taxonomical approach to MM could be (?) confusing.  SEM took over multivariate hypothesis testing. Table of distinctions among MM. Fundamental matrices.
-
-
-### Thursday: Introduction to R and RStudio
-
-#### Scientist = data journalist
+### Scientist = data journalist
 
 
 Scientists work with data.   
@@ -65,11 +50,14 @@ We'll have the total of **8 LABS**:
 
 As you see, the stories we'll tell will get technical and in addition to markdown we'll require knowledge of multivariate statistics and R programming. Just as with markdown, there are many places online to learn it. In fact, when it comes to R - there are *too* many. 
 
+
+### Learning R 
+
 [A GOOD PLACE TO START LEARNING R](http://www.rstudio.com/resources/training/online-learning/) - terrific resouce by RStudio team collects the best online resources. Check out every link they mention, it's worth it. In fact, do it right now. 
 
 Now we'll use one of the resources mentioned in the link above, [swirl](http://swirlstats.com/students.html).  
 Open your RStudio and execute the following code:  
-
+  
 ```
 install.packages("swirl")  
 install.packages("Rtools")  
@@ -81,9 +69,9 @@ library(swirlify)
 Follow the prompt and complete the first lesson.
 
 
-FOR INSPIRATION:  
-  
-  Working with data is becoming its own science:    
+### FOR INSPIRATION:  
+
+Working with data is becoming its own science:    
   - [Coursera](https://www.coursera.org/specialization/jhudatascience/1)  
 - [DataCamp](https://www.datacamp.com/)  
 - [O'Reilly](http://shop.oreilly.com/product/0636920034834.do)  
