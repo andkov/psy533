@@ -70,6 +70,13 @@ Follow the prompt and complete the first lesson.
 
 I also recommend completing two free interactive courses at DataCamp: [Introduction to R](https://www.datacamp.com/courses/introduction-to-r) and [Data Analysis and Statistical Inference](https://www.datacamp.com/courses/data-analysis-and-statistical-inference_mine-cetinkaya-rundel-by-datacamp). Their content partially overlaps with the training by two availible courses by [swirl](http://swirlstats.com/students.html) package, but gives a different take and examples. 
 
+
+### More Resources
+ - for brief reviews of key books and resources see Will Beasley's [Resources Opinions](https://github.com/OuhscBbmc/RedcapExamplesAndPatterns/blob/master/DocumentationGlobal/ResourcesOpinions.md)
+ - another presentation by Will will give you a excellent overview of [Statistical Collaboration with GitHub](http://htmlpreview.github.io/?https://raw.githubusercontent.com/OuhscBbmc/StatisticalComputing/master/2014_Presentations/05_May/BeasleyScugGitHub2014-05.html#/)
+ - Winston Chan's [R Cookbook](http://shop.oreilly.com/product/9780596809164.do) is a perfect book to get you started with producing graphs with RStudio
+ - [Quick-R](http://www.statmethods.net/) - thorough and convenient resource for R reference
+
 ### FOR INSPIRATION:  
   
   Working with data is becoming its own science:    
