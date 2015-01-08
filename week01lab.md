@@ -1,15 +1,14 @@
 ##Introduction to R and RStudio
 
-### Scientist = data journalist
+### The working metaphor
 
+Scientists are **data journalists** who tell stories of their data.     
+They type text to instruct a *human* reader how to recreate the story his/her mind.  
+They type text to instruct a *copmuter* how to manipulate data, evaluate models, print graphs, and  assemble output.   
 
-Scientists work with data.   
-Journalists tell stories.   
-**Data journalists** tell stories of their data.  
-They do with with **COMPUTER CODE**
-  
-  START WITH [a markdown simulator](https://demo.ocpu.io/markdownapp/www/). This Javascript app by  [Jeroen Ooms](mailto:jeroenooms@gmail.com) shows how computer code can be used to create an electronic report.      
+**Documents** that contain typed instructions for both human and computer consumption that recreate a story about the data are called **DYNAMIC**.
 
+See an example of a dynamic document in this [markdown simulator](https://demo.ocpu.io/markdownapp/www/), created in javascript by  [Jeroen Ooms](http://jeroenooms.github.io/). 
 
 **markdown** language uses special combinations of characters to make text strings appear differently: in bold, italics, as a heading, or as a name of the column in the table. This language is very simple and straightforward, but may take a little bid to get used to. To help you get proficient with markdown consider some of the following resources.  
 
@@ -48,8 +47,9 @@ We'll have the total of **8 LABS**:
 12 Mar | 10 |18|**Lab 7** : Confirmatory Factor Analysis
 26 Mar | 12  |22|**Lab 8** : Structural Equation Modeling
 
-As you see, the stories we'll tell will get technical and in addition to markdown we'll require knowledge of multivariate statistics and R programming. Just as with markdown, there are many places online to learn it. In fact, when it comes to R - there are *too* many. 
+As you see, the stories we'll tell will be technical: they will involve matrices and vectors, their transposes and inversions, decompositions, and projections. **markdown** will help us style text for human consumption, but all the instructions to the computer about what to do with matrices, datasets, and other objects will be given in  **R language**.  
 
+Learning enough **R language** in order to work with statistical models of multivariate data is the purpose of these 8 labs. 
 
 ### Learning R 
 
@@ -57,7 +57,7 @@ As you see, the stories we'll tell will get technical and in addition to markdow
 
 Now we'll use one of the resources mentioned in the link above, [swirl](http://swirlstats.com/students.html).  
 Open your RStudio and execute the following code:  
-  
+
 ```
 install.packages("swirl")  
 install.packages("Rtools")  
@@ -70,8 +70,8 @@ Follow the prompt and complete the first lesson.
 
 
 ### FOR INSPIRATION:  
-
-Working with data is becoming its own science:    
+  
+  Working with data is becoming its own science:    
   - [Coursera](https://www.coursera.org/specialization/jhudatascience/1)  
 - [DataCamp](https://www.datacamp.com/)  
 - [O'Reilly](http://shop.oreilly.com/product/0636920034834.do)  
