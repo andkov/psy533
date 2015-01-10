@@ -1,66 +1,10 @@
-[edit page](https://github.com/andkov/psy533/edit/gh-pages/1.md)
+html_document:
+  self_contained: true
 
-
-## Plan for the week 
-
-December/January
-
-  . | Mon  | Tue  | Wed  | Thu  | Fri  | .     
-----|------|------|------|------|------|----
-28  | 29   | 30   | 31   | 1    | 2    |  3  
-4   |**5** | 6    | 7    |**8** |  9   | 10   
-11  | 12   | 13   | 14   | 15   | 16   | 17  
-
-
-### Monday
-Overview
-
-### Thursday 
-Multivariate Methods History   
-</br>
-**Lab 1** - Introduction to R and RStudio
-
-#### Homework 
-none
-
-
-### Learning objectives: Concepts
-
-
-#### Basic
-
-- objective 2 
-- objective 3  
-
-#### Intermediate  
-- objective 1  
-- objective 2  
-
-#### Advanced 
-- objective 1     
-
-
-### Learning objectives: Skills 
-
-
-#### Basic
-- add emphasis in markdown (**bold** and *italics*)
-- make headings of different types in markdown 
-- create and combine vectors in R
-- perform numeric operations with in R
-
-
-#### Intermediate  
-- name elements of the vector
-- recycle vector of smaller size
-- link images and webpages in markdown
-
-#### Advanced 
- - recall commands in the console
- - change the color scheme of R studio
-
-
-## Monday: Overview 
+---
+## Week 1 : Jan 5 - Jan 9, 2015
+---
+### Monday: Overview 
 
 What are Multivariate Methods(MM)? Classifications. 1st generation. 2nd generation. New umbrella: Canonical Correlation -> Structural Equation Modeling. Multiple variables, dimensions, perspectives. Knife example. Reduce dimensions. Explore prespectives. 
 
@@ -69,17 +13,18 @@ MM is GLM with multiple outcomes. MM: Reduces number of DVs, improves measuremen
 GIGO. Garbage in = garbage out. Human mind will find patterns even in randomness.  Taxonomical approach to MM could be (?) confusing.  SEM took over multivariate hypothesis testing. Table of distinctions among MM. Fundamental matrices.
 
 
-## Thursday: Introduction to R and RStudio
+### Thursday: Introduction to R and RStudio
 
-### The working metaphor
+#### Scientist = data journalist
 
-Scientists are **data journalists** who tell stories of their data.     
-They type text to instruct a *human* reader how to recreate the story his/her mind.  
-They type text to instruct a *copmuter* how to manipulate data, evaluate models, print graphs, and  assemble output.   
 
-**Documents** that contain typed instructions for both human and computer consumption that recreate a story about the data are called **DYNAMIC**.
+Scientists work with data.   
+Journalists tell stories.   
+**Data journalists** tell stories of their data.  
+They do with with **COMPUTER CODE**
+  
+  START WITH [a markdown simulator](https://demo.ocpu.io/markdownapp/www/). This Javascript app by  [Jeroen Ooms](mailto:jeroenooms@gmail.com) shows how computer code can be used to create an electronic report.      
 
-See an example of a dynamic document in this [markdown simulator](https://demo.ocpu.io/markdownapp/www/), created in javascript by  [Jeroen Ooms](http://jeroenooms.github.io/). 
 
 **markdown** language uses special combinations of characters to make text strings appear differently: in bold, italics, as a heading, or as a name of the column in the table. This language is very simple and straightforward, but may take a little bid to get used to. To help you get proficient with markdown consider some of the following resources.  
 
@@ -118,11 +63,7 @@ We'll have the total of **8 LABS**:
 12 Mar | 10 |18|**Lab 7** : Confirmatory Factor Analysis
 26 Mar | 12  |22|**Lab 8** : Structural Equation Modeling
 
-As you see, the stories we'll tell will be technical: they will involve matrices and vectors, their transposes and inversions, decompositions, and projections. **markdown** will help us style text for human consumption, but all the instructions to the computer about what to do with matrices, datasets, and other objects will be given in  **R language**.  
-
-Learning enough **R language** in order to work with statistical models of multivariate data is the purpose of these 8 labs. 
-
-### Learning R 
+As you see, the stories we'll tell will get technical and in addition to markdown we'll require knowledge of multivariate statistics and R programming. Just as with markdown, there are many places online to learn it. In fact, when it comes to R - there are *too* many. 
 
 [A GOOD PLACE TO START LEARNING R](http://www.rstudio.com/resources/training/online-learning/) - terrific resouce by RStudio team collects the best online resources. Check out every link they mention, it's worth it. In fact, do it right now. 
 
@@ -139,15 +80,14 @@ library(swirlify)
 
 Follow the prompt and complete the first lesson.
 
-I also recommend completing two free interactive courses at DataCamp: [Introduction to R](https://www.datacamp.com/courses/introduction-to-r) and [Data Analysis and Statistical Inference](https://www.datacamp.com/courses/data-analysis-and-statistical-inference_mine-cetinkaya-rundel-by-datacamp). Their content partially overlaps with the training by two availible courses by [swirl](http://swirlstats.com/students.html) package, but gives a different take and examples. 
 
-### FOR INSPIRATION:  
+FOR INSPIRATION:  
   
   Working with data is becoming its own science:    
-- [Coursera](https://www.coursera.org/specialization/jhudatascience/1)  
+  - [Coursera](https://www.coursera.org/specialization/jhudatascience/1)  
 - [DataCamp](https://www.datacamp.com/)  
 - [O'Reilly](http://shop.oreilly.com/product/0636920034834.do)  
    
    It's also becoming a high art:  
-   - [Bostock](http://bost.ocks.org/mike/)  
+     - [Bostock](http://bost.ocks.org/mike/)  
    - [D3](https://github.com/mbostock/d3/wiki/Gallery)  
