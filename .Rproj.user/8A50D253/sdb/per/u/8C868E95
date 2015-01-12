@@ -1,0 +1,17 @@
+{
+    "contents" : "install.packages(\"swirl\")  \ninstall.packages(\"Rtools\")  \ninstall.packages(\"devtools\")  \ndevtools::install_github(c(\"swirldev/swirl\", \"swirldev/swirlify\"))  \nlibrary(swirlify)  \n\nlibrary(swirl)\ninstall_from_swirl(\"Data Analysis\")\ninstall_from_swirl(\"Regression Models\")\n\nswirl()\n",
+    "created" : 1420852535280.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "507576125",
+    "id" : "8C868E95",
+    "lastKnownWriteTime" : 30681274979123311,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
