@@ -46,7 +46,7 @@ Meeting|Week|Class | Topic   | Reading | Assignment |
 
 ### Texts
 
-- [An Introduction to Applied Multivariate Analysis]() by Raykov, T. & Marcoulides, G.A , 2008. New York, NY: Routledge
+- [An Introduction to Applied Multivariate Analysis]() by Raykov, T. & Marcoulides, G.A , 2008. New York, NY: Routledge. Download [datasets](http://www.psypress.com/books/details/9780805863758/) that come with it. 
 
 - [A First Course in Structural Equation Modeling]() by Raykov, T. & Marcoulides, G.A ,2006. Mahwah, NJ: Lawrence Erlbaum Associates, Inc.
 
