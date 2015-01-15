@@ -1,0 +1,123 @@
+---
+title: "HM 1 - Matrix Algebra"
+author: "PSY 533"
+date: "Wednesday, January 14, 2015"
+output: pdf_document
+---
+
+
+**DUE**: January 23, before midnight  
+
+**INSTRUCTIONS**: Submit work as an R file emailed to piccinin@uvic.ca and andkov@uvic.ca
+
+**NAMING**: Please name your file: "PSY-533-HM1-Lastname-Firstname.R"
+
+
+### 1.  Demonstrations
+
+With two randomly generated  matrices of the order (5,1), demonstrate the work of:   
+
+a) Associative Law of matrix addition  
+```{r}
+
+```
+
+b) Distributive Law of matrix addition  
+```{r}
+
+```
+
+Using the matrices from **3.Computations** of this HM demonstrate:
+
+c)  Associative rule of matrix multiplication
+
+```{r}
+
+```
+
+d)  Distributive rule of matrix multiplication
+```{r}
+
+```
+
+e)  that matrix multiplication is not commutative
+```{r}
+
+```
+
+
+### 2. Word problem
+Given the data vector
+```
+4, 7, 2, 5, 8
+```
+transform the standardized scores so that  its variance quadruplesand and the new mean becomes equal to the value of raw scores's median. Round to remove decimals. 
+
+
+```{r, eval=F, echo=F, results='hide'}
+X <- c(4, 7, 2, 5, 8)
+X
+
+dX <- X - mean(X)
+dX
+
+zX <- dX/sd(X)
+zX
+
+var(zX)
+mean(zX)
+
+
+ltX <- zX * 2 + median(X)
+ltX
+
+round((ltX))
+
+```
+
+### 3.  Computations
+Given the matrices
+$$
+\begin{array}{*{20}{c}}
+{{\bf{A}} = \left[ {\begin{array}{*{20}{c}}
+1&3&4\\
+5&0&8\\
+3&2&9
+\end{array}} \right]}&{}&{{\bf{B}} = \left[ {\begin{array}{*{20}{c}}
+1&3&{13}\\
+2&3&1\\
+1&3&8
+\end{array}} \right]}&{}&{{\bf{C}} = \left[ {\begin{array}{*{20}{c}}
+6&7&4\\
+8&6&2\\
+{19}&{11}&8
+\end{array}} \right]}
+\end{array}
+$$
+
+
+
+Compute the following:
+
+a) ${\bf{A + B}}\\$ 
+
+b) ${\bf{CC'}}\\$
+
+c) ${\bf{A - C}}\\$
+
+d) $Tr({\bf{AA}}){\bf{'}}\\$
+
+e) $Tr({\bf{A'C}})$
+
+
+
+
+
+### 4. Are you smarter than a fifth-grader?
+Solve with matrix algebra in R:
+$$ 
+\begin{array}{l}
+2x + 2y = 3\\
+x - 4y =  - 1
+\end{array}
+$$
