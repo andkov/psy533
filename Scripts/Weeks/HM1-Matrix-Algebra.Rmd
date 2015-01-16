@@ -15,7 +15,7 @@ output: pdf_document
 
 ### 1.  Demonstrations
 
-With two randomly generated  matrices of the order (5,1), demonstrate the work of:   
+With three randomly generated  matrices of the order (5,1), demonstrate the work of:   
 
 a) Associative Law of matrix addition  
 ```{r}
