@@ -282,3 +282,9 @@ Xbar <- t(unit(4)) %*% X / nrow(X)
 Xbar
 mean(X[,1])
 
+# Converting to deviation scores
+X
+x <- X[,1]
+x
+dx <- x - mean(x)
+dx
