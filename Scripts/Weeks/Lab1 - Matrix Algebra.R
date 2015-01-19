@@ -277,8 +277,24 @@ w <- c(1,1,1,0,0,0)
 Y <- X %*% w
 Y
 
-# Compute the mean using the summation vector
+# slide 28 
+# Compute the mean using the summation vector 
 Xbar <- t(unit(4)) %*% X / nrow(X)
 Xbar
 mean(X[,1])
+
+
+# slide 33
+# Standardize the data matrix X multiplying it with D^-(1/2)
+
+
+# slide 34
+#  Production of matrix D^-(1/2)
+
+
+# slide 36
+# Convert S into R using D^-(1/2)
+
+
+# convert S into R 
 
