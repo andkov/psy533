@@ -1,0 +1,17 @@
+{
+    "contents" : "---\ntitle: \"HM 1 - Matrix Algebra\"\nauthor: \"PSY 533\"\ndate: \"Wednesday, January 14, 2015\"\noutput: pdf_document\n---\n\n\n**DUE**: January 23, before midnight  \n\n**INSTRUCTIONS**: Submit work as an R file emailed to piccinin@uvic.ca and andkov@uvic.ca\n\n**NAMING**: Please name your file: \"PSY-533-HM1-Lastname-Firstname.R\"\n\n\n### 1.  Demonstrations\n\nWith three randomly generated  matrices of the order (5,1), demonstrate the work of:   \n\na) Associative Law of matrix addition  \n```{r}\n\n```\n\nb) Distributive Law of matrix addition  \n```{r}\n\n```\n\nUsing the matrices from **3.Computations** of this HM demonstrate:\n\nc)  Associative rule of matrix multiplication\n\n```{r}\n\n```\n\nd)  Distributive rule of matrix multiplication\n```{r}\n\n```\n\ne)  that matrix multiplication is not commutative\n```{r}\n\n```\n\n\n### 2. Word problem\nGiven the data vector\n```\n4, 7, 2, 5, 8\n```\ntransform the standardized scores so that  its variance quadruplesand and the new mean becomes equal to the value of raw scores's median. Round to remove decimals. \n\n\n```{r, eval=F, echo=F, results='hide'}\nX <- c(4, 7, 2, 5, 8)\nX\n\ndX <- X - mean(X)\ndX\n\nzX <- dX/sd(X)\nzX\n\nvar(zX)\nmean(zX)\n\n\nltX <- zX * 2 + median(X)\nltX\n\nround((ltX))\n\n```\n\n### 3.  Computations\nGiven the matrices\n$$\n\\begin{array}{*{20}{c}}\n{{\\bf{A}} = \\left[ {\\begin{array}{*{20}{c}}\n1&3&4\\\\\n5&0&8\\\\\n3&2&9\n\\end{array}} \\right]}&{}&{{\\bf{B}} = \\left[ {\\begin{array}{*{20}{c}}\n1&3&{13}\\\\\n2&3&1\\\\\n1&3&8\n\\end{array}} \\right]}&{}&{{\\bf{C}} = \\left[ {\\begin{array}{*{20}{c}}\n6&7&4\\\\\n8&6&2\\\\\n{19}&{11}&8\n\\end{array}} \\right]}\n\\end{array}\n$$\n\n\n\nCompute the following:\n\na) ${\\bf{A + B}}\\\\$ \n\nb) ${\\bf{CC'}}\\\\$\n\nc) ${\\bf{A - C}}\\\\$\n\nd) $Tr({\\bf{AA}}){\\bf{'}}\\\\$\n\ne) $Tr({\\bf{A'C}})$\n\n\n\n\n\n### 4. Are you smarter than a fifth-grader?\nSolve with matrix algebra in R:\n$$ \n\\begin{array}{l}\n2x + 2y = 3\\\\\nx - 4y =  - 1\n\\end{array}\n$$\n",
+    "created" : 1421960533904.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1155659533",
+    "id" : "C0038BC2",
+    "lastKnownWriteTime" : 1421960514,
+    "path" : "~/GitHub/psy533/Scripts/Weeks/HM1-Matrix-Algebra.Rmd",
+    "project_path" : "Scripts/Weeks/HM1-Matrix-Algebra.Rmd",
+    "properties" : {
+        "tempName" : "Untitled3"
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
