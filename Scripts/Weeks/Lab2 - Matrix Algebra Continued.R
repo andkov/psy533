@@ -308,23 +308,12 @@ mean(X[,1])
 X
 x <- X[,1]
 x
-dx <- x - mean(x)
-dx
+xbar <- x - mean(x)
+xbar
 
-sumv <- unit(nrow(X))
+## Stopped in class here 2015-01-22
 
-sumv %*% dx
-
-
-N <- nrow(X)
-sumv <- unit(N)
-sumv
-P <- sumv%*%t(sumv)/N
-P
-dX <- X - (P %*% X)
-dX
-
-
+# Create a function to compute deviation scores
 dev <- function(x){
 N <- nrow(x)
 sumv <- unit(N)
@@ -333,7 +322,6 @@ x - (P %*% x)
 }
 dX <- dev(X)
 dX
-
 
 
 # Let (Matrix from AMA text, page 11 and 32)
@@ -348,17 +336,22 @@ X
 
 
 ## Slide 31
-cov(X)
-var(X)
-cor(X)
 
+# Compute covariance of matrix X
+cov(X)
+
+# Compute variance of matrix X
+var(X)
+
+# Compute correlation of matrix X
+cor(X)
 
 
 # Slide 32
 t(X) %*% X
 
 
-# slide 33
+# slide 33 -34
 # Standardize the data matrix X multiplying it with D^-(1/2)
 dX <- dev(X)
 dX
@@ -381,23 +374,29 @@ sympower <- function(x,pow) {
 Dn12 <- sympower(D,-1/2)
 Dn12
 
-## Or we can create D^-1/2 by hand
+### ********** Alternativive
+# Or we can create D^-1/2 by hand
 # Create vector of values that should go on the diagonal of D^-1/2 
 DnD <- 1/sqrt(diag(cov(X)))
-
 # Create Dn12 from DnD
 Dn12 <- diag(D)
+## *********** Alternative
 
-
-
-# slide 34
-#  Production of matrix D^-(1/2)
-
-
-# slide 36
+## slide 36
 # Convert S into R using D^-(1/2)
+S <- cov(X)
+S
+R <- Dn12 %*% S %*% Dn12
+R
+all.equal(cor(X), R)
+
+# convert S into R using D
+R <- cor(X)
+R
+D <- diag(diag(cov(X)))
+D
+S <- sqrt(D) %*% R %*% sqrt(D)
+all.equal(cov(X), S)
 
 
-# convert S into R 
 
->>>>>>> origin/master

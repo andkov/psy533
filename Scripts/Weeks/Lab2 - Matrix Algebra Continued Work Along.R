@@ -141,32 +141,23 @@ b%*%a
 ## Matrix by Matrix Multiplication
 A <- matrix( c(1,0,2,5), 2,2, byrow=FALSE)
 B <- matrix(c(-1,-2,4,3),2,2,byrow=F)
-A
-B
+
 
 # Pre multiply B by A
-A %*% B
+
 
 # Post multiply B by A
-B %*% A
+
 
 ## Matrix Division : Inverses
-A <- matrix( c(1,3,3,9,6,5,9,1,8), 3,3, byrow=FALSE)
-A
+
 
 # Find the inverse of A
-solve(A)
+
 
 # Verify : AA^-1 should be identity
-A %*% solve(A)
-zapsmall(A %*% solve(A))
-round(A %*% solve(A))
 
-B <- matrix( c(1, 2,3, 0,1,4,5,6,0), 3,3, byrow=TRUE)
-solve(B)
 
-## Slide 17
-## Possible Activity: using A and x matrices on page 40 (AMA) replicate the quadratic form (2.22)
 
 ## Slide 18
 ## Inverses and their properties
@@ -177,23 +168,23 @@ B <- matrix( c(1, 2,3, 0,1,4,5,6,0), 3,3, byrow=TRUE)
 
 # Demonstrate: 
 # AA^-1 = I = A^-1A
-left <- A %*% solve(A)
-right <- solve(A) %*% A
+left <- 
+right <- 
 all.equal(left,right)
 
 # (AB)^-1 =  (B^-1)(A^-1)
-left <- solve(A %*% B)
-right <- solve(B) %*% solve(A)
+left <- 
+right <- 
 all.equal(left,right)
 
 # (A^-1)^-1 = A
-left <- solve(solve(A))
-right <- A
+left <- 
+right <- 
 all.equal(left,right)
 
 # (A')^-1 = (A^-1)'
-left <- solve(t(A))
-right <- t(solve(A))
+left <- 
+right <- 
 all.equal(left,right)
 
 
@@ -205,23 +196,23 @@ A <- matrix( c(1,3,3,9,6,5,9,1,8), 3,3, byrow=FALSE)
 B <- matrix( c(1, 2,3, 0,1,4,5,6,0), 3,3, byrow=TRUE)
 
 # Find the determinant of A
-det(A)
+
 
 # Demonstrate:
 # |A'| = |A| 
-left  <- det(t(A))
-right <- det(A)
+left  <- 
+right <- 
 all.equal(left, right)
 
 # |A^-1| = 1/|A| 
-left  <- det(solve(A))
-right <- 1/det(A)
+left  <- 
+right <- 
 print(c(left,right))
 all.equal(left, right)
 
 # |AB| = |A||B|
-left  <- det (A %*% B)
-right <- det(A) * det(B)
+left  <- 
+right <- 
 print(c(left,right))
 all.equal(left, right)
 
@@ -234,29 +225,29 @@ A <- matrix( c(1,3,3,9,6,5,9,1,8), 3,3, byrow=FALSE)
 B <- matrix( c(1, 2,3, 0,1,4,5,6,0), 3,3, byrow=TRUE)
 
 # Find the trace of A
-sum(diag(A))
+
 
 # Define function named "trace" that finds the trace of the matrix that you pass to the function
 trace <- function(x){  return(sum(diag(x)))  }
 # Pass matrix A to function "trace"
-trace(A)
+
 
 # Demonstrate:
 # Tr(A + B) = Tr(A) + Tr(B)
-left <- trace(A + B)
-right <- trace(A) + trace(B)
+left <- 
+right <- 
 print(c(left,right))
 all.equal(left, right)
 
 # Tr(A) = Tr(A’)
-left <- trace(A)
-right <- trace(t(A))
+left <- 
+right <- 
 print(c(left,right))
 all.equal(left, right)
 
 # Tr(cA) = c Tr(A)
-left <- trace(3*A)
-right <- 3 * trace(A)
+left <- 
+right <- 
 print(c(left,right))
 all.equal(left, right)
 
@@ -275,32 +266,30 @@ X
 unit <- function(n){matrix(rep(1,n),n,1)}
 
 # using function "unit" create a a unit vector of size 4
-unit(4)
+
 # using function "unit" create a unity vector of size 6
-unit(6)
+
 
 ## Slide 26 
 # pre-multiplying by a summation vector
 # summary over individuals for each variable
-t(unit(4)) %*% X
+
 
 ## Slide 27 
 # post-multiplying by a summation vector
 #  summary for each individuals over all variables
-X %*% unit(6)
+
 
 # Select only test scores using a dummy vector
 # create a vector of dummy weights
-w <- c(1,1,1,0,0,0)
+
 # post-multiplying by a weight vector
-Y <- X %*% w
-Y
+
+
 
 # slide 28 
 # Compute the mean using the summation vector 
-Xbar <- t(unit(4)) %*% X / nrow(X)
-Xbar
-mean(X[,1])
+Xbar <- 
 
 
 # slide 29
@@ -308,23 +297,11 @@ mean(X[,1])
 X
 x <- X[,1]
 x
-dx <- x - mean(x)
-dx
-
-sumv <- unit(nrow(X))
-
-sumv %*% dx
+xbar <- 
 
 
-N <- nrow(X)
-sumv <- unit(N)
-sumv
-P <- sumv%*%t(sumv)/N
-P
-dX <- X - (P %*% X)
-dX
 
-
+# Create a function to compute deviation scores
 dev <- function(x){
 N <- nrow(x)
 sumv <- unit(N)
@@ -333,7 +310,6 @@ x - (P %*% x)
 }
 dX <- dev(X)
 dX
-
 
 
 # Let (Matrix from AMA text, page 11 and 32)
@@ -348,24 +324,29 @@ X
 
 
 ## Slide 31
-cov(X)
-var(X)
-cor(X)
+
+# Compute covariance of matrix X
+
+
+# Compute variance of matrix X
+
+
+# Compute correlation of matrix X
 
 
 
 # Slide 32
-t(X) %*% X
 
 
-# slide 33
+
+# slide 33 -34
 # Standardize the data matrix X multiplying it with D^-(1/2)
-dX <- dev(X)
-dX
+
+
 
 # Create D matrix
-D <- diag(diag(cov(X)))
-D
+
+
 
 
 # Raise D into the power (-1/2)
@@ -378,26 +359,32 @@ sympower <- function(x,pow) {
   sympow <- v %*% d %*% t(v)
   sympow
 }
-Dn12 <- sympower(D,-1/2)
-Dn12
+Dn12 <- 
+  
 
-## Or we can create D^-1/2 by hand
+### ********** Alternativive
+# Or we can create D^-1/2 by hand
 # Create vector of values that should go on the diagonal of D^-1/2 
-DnD <- 1/sqrt(diag(cov(X)))
 
 # Create Dn12 from DnD
-Dn12 <- diag(D)
 
+## *********** Alternative
 
-
-# slide 34
-#  Production of matrix D^-(1/2)
-
-
-# slide 36
+## slide 36
 # Convert S into R using D^-(1/2)
+S <- cov(X)
+S
+R <- 
+R
+all.equal(cor(X), R)
+
+# convert S into R using D
+R <- cor(X)
+R
+D <- diag(diag(cov(X)))
+D
+S <- 
+all.equal(cov(X), S)
 
 
-# convert S into R 
 
->>>>>>> origin/master
