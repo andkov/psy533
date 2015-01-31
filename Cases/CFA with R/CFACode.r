@@ -1,0 +1,57 @@
+library(Hmisc)
+library(sem)
+source("AdvancedFactorFunctionsV1.01.r")
+AthleticsData <- spss.get("AthleticsData.sav")
+attach(AthleticsData)
+AD.R <- cor(AthleticsData)
+AD.nobs <- dim(AthleticsData)[1]
+cfa1.model <- specifyModel("CFA1.r")
+options(digit=5)
+cfa1.fit <- sem(cfa1.model, AD.R, AD.nobs)
+summary(cfa1.fit)
+modIndices(cfa1.fit)
+cfa2.model <- specifyModel("CFA2.r")
+cfa2.model <- update(cfa1.model)
+add, Endurance -> MAXPUSHU, theta19, NA
+cfa2.fit <- sem(cfa2.model, AD.R, AD.nobs)
+summary(cfa2.fit)
+modIndices(cfa2.fit)
+cfa3.model <- specifyModel("CFA3.r")
+cfa3.fit <- sem(cfa3.model, AD.R, AD.nobs)
+summary(cfa3.fit)
+modIndices(cfa3.fit)
+cfa4.model <- specifyModel("CFA4.r")
+cfa4.fit <- sem(cfa4.model, AD.R, AD.nobs)
+summary(cfa4.fit)
+modIndices(cfa4.fit)
+factanal(AthleticsData, factors = 3, rotation="varimax")
+
+#########
+library(Hmisc)
+library(sem)
+source("AdvancedFactorFunctionsV1.01.r")
+AthleticsData <- spss.get("AthleticsData.sav")
+attach(AthleticsData)
+AD.R <- cor(AthleticsData)
+AD.nobs <- dim(AthleticsData)[1]
+(x <- SetupCFAPattern(AD.R,3,c("Hand-Eye","Endurance","Strength")))
+FAtoCFA(x,model.name = "Pure1")
+Pure1.model <-cfa(covs=NULL,reference.indicators=FALSE)
+Pure1.fit <- sem(Pure1.model, AD.R, AD.nobs)
+CFAfromSEM(Pure1.fit)
+print.FLS(CFAfromSEM(Pure1.fit))
+
+FAtoSEM(x,model.name="Pure2")
+Pure2.model <- specifyModel() ## paste lines
+sem(Pure2.model,AD.R,AD.nobs)
+(x <- MLFA(AD.R,3,AD.nobs)$Varimax)
+FAtoSEM(x,"fa1",cutoff=0.30,make.start.values=TRUE)
+fa1.model <- specifyModel() #paste in lines
+fa1.out <- sem(fa1.model,AD.R,AD.nobs)
+summary(fa1.out)
+FAtoREF(x,AD.R,"ref1")
+ref1.model <- specifyModel()
+# paste in lines from ref1.r
+ref1.out <- sem(ref1.model,AD.R,AD.nobs)
+summary(ref1.out)
+

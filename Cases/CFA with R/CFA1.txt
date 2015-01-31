@@ -1,0 +1,26 @@
+## Factor 1 -- Endurance 
+Endurance -> X.1500M,  theta01, NA 
+Endurance -> X.2KROW,  theta02, NA 
+Endurance -> X.12MINTR,theta03, NA 
+## Factor 2 -- Strength 
+Strength  -> BENCH,    theta04, NA 
+Strength  -> CURL,     theta05, NA 
+Strength  -> MAXPUSHU, theta06, NA 
+## Factor 3 -- Hand-Eye Coordination 
+Hand-Eye  -> PINBALL,  theta07, NA 
+Hand-Eye  -> BILLIARD, theta08, NA 
+Hand-Eye  -> GOLF,     theta09, NA 
+## Unique Variances 
+X.1500M   <->  X.1500M,  theta10, NA 
+X.2KROW   <->  X.2KROW,  theta11, NA 
+X.12MINTR <->  X.12MINTR, theta12, NA 
+BENCH     <->  BENCH, theta13, NA 
+CURL      <->  CURL, theta14, NA 
+MAXPUSHU  <->  MAXPUSHU, theta15, NA 
+PINBALL   <->  PINBALL, theta16, NA 
+BILLIARD  <->  BILLIARD, theta17, NA 
+GOLF      <->  GOLF, theta18, NA 
+## Factor Variances fixed at 1 
+Endurance <->  Endurance, NA, 1 
+Strength  <->  Strength,  NA, 1 
+Hand-Eye  <->  Hand-Eye,  NA, 1 

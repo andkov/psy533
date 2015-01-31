@@ -1,0 +1,8 @@
+List of elements in sem.fit object:
+ $ var.names  : chr [1:12] "PINBALL" "BILLIARD" "GOLF" "X.1500M" ...
+ $ S         correlation matix
+ $ vcov      theta correlation matrix
+ $ C  		 correlations(?) among items of the same factor
+ $ A         loadings for factors?
+ $ P          communalities?
+ 
