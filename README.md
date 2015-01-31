@@ -1,7 +1,7 @@
 Longitudinal Modeling
 ============
 
-Accompanies a [graduate course](http://andkov.github.io/psy533/) on longitudinal modeling (PSY-513) at the University of Victoria
+Accompanies a graduate course on longitudinal modeling (PSY-513) at the University of Victoria
 
 The materials in the [Documentation](https://github.com/andkov/psy533/tree/master/Documentation) folder are organized handouts from [statpower.net](http://www.statpower.net) the website of James Steiger at Vanderbilt University. These and other resources can be found on the website of the [Multivariate Statistics](http://statpower.net/P312.html) course taught by him. 
 
