@@ -1,14 +1,10 @@
 Longitudinal Modeling
 ============
 
-Accompanies a graduate course on longitudinal modeling (PSY-513) at the University of Victoria
-
-[website](http://andkov.github.io/psy533/)
-
+Accompanies a [graduate course](http://andkov.github.io/psy533/) on longitudinal modeling (PSY-513) at the University of Victoria
 
 The materials in the [Documentation](https://github.com/andkov/psy533/tree/master/Documentation) folder are organized handouts from [statpower.net](http://www.statpower.net) the website of James Steiger at Vanderbilt University. These and other resources can be found on the website of the [Multivariate Statistics](http://statpower.net/P312.html) course taught by him. 
 
-### Shiny Application for factorial decomposition
 
 [ShinyEFA](http://glimmer.rstudio.com/wibeasley/ShinyEFA/) is a web application created with [R](http://cran.rstudio.com/) and [Shiny](http://www.rstudio.com/shiny/). It is created and maintained by [Andrey Koval](http://www.statcanvas.net) (University of Victoria) and [Will Beasley](http://www.linkedin.com/profile/view?id=48089881&trk=nav_responsive_tab_profile) (University of Oklahoma Health Sciences Center). 
 
