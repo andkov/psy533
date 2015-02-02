@@ -8,11 +8,21 @@ library(Hmisc)
 library(psych)
 library(colorspace)
 library(corrgram)
-
+library(gcookbook)
+data()
 
 AthleticsData <- read.csv("./Cases/CFA with R/AthleticsData.csv")
 
+dsA <- AthleticsData
+names(dsA) 
+head(dsA)
 dsCA <- psych::Harman.Holzinger # Cognitive Abilities
 dsET <- psych::Harman.Burt # Emotional Traits
 dsPM <- psych::Harman.8 # Physical Measures
+
+
+
+head(dsCA)
+
+
 
