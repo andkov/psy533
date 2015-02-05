@@ -1,0 +1,16 @@
+{
+    "contents" : "# remove all elements for a clean start\nrm(list=ls(all=TRUE))\ncat(\"\\014\")\n\n# install.packages(c(\"Hmisc\",\"sem\",\"ggplot2\",\"colorspace\",\"corrgram\",\"plotrix\",\"psych\"))\n\nlibrary(Hmisc)\nlibrary(psych)\nlibrary(colorspace)\nlibrary(corrgram)\nlibrary(gcookbook)\ndata()\n\nAthleticsData <- read.csv(\"./Cases/CFA with R/AthleticsData.csv\")\n\ndsA <- AthleticsData\nnames(dsA) \nhead(dsA)\ndsCA <- psych::Harman.Holzinger # Cognitive Abilities\ndsET <- psych::Harman.Burt # Emotional Traits\ndsPM <- psych::Harman.8 # Physical Measures\n\n\n\nhead(dsCA)\n\n\n\n",
+    "created" : 1422900339563.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1926290069",
+    "id" : "12B34A4D",
+    "lastKnownWriteTime" : 1422903967,
+    "path" : "~/GitHub/psy533/Cases/sandbox/BasicStart.R",
+    "project_path" : "Cases/sandbox/BasicStart.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
