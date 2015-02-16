@@ -44,3 +44,18 @@ mtcars %>%
         opacity := input_slider(0, 1)
   ) %>% 
   layer_points()
+
+data(package="psych")
+
+ds <- psych::sat.act
+head(sat.act)
+# GGally::ggpairs(ds[,c("ACT", "SATV","SATQ")])
+
+# GGally::ggpairs(ds)
+ds$genderF <- factor(ds$gender, levels=c(1,2), labels=c("Male","Female"))
+GGally::ggpairs(ds, color="genderF")
+
+
+ds[ ,c("ACT", "SATV","SATQ")]
+
+ds[,"ACT"]

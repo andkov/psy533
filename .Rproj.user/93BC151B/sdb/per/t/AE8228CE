@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1422912290964.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "AE8228CE",
+    "lastKnownWriteTime" : 7741240723082584096,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "sat.act",
+        "contentUrl" : "content?title=sat.act&file=4586e2785bea440b990eac8742288f9e.htm",
+        "displayedObservations" : 700,
+        "displayedVariables" : 7,
+        "totalObservations" : 700,
+        "variables" : 6
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

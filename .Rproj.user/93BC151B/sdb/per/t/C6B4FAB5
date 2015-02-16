@@ -1,12 +1,12 @@
 {
-    "contents" : "# remove all elements for a clean start\nrm(list=ls(all=TRUE))\ncat(\"\\014\")\n\n# install.packages(c(\"Hmisc\",\"sem\",\"ggplot2\",\"colorspace\",\"corrgram\",\"plotrix\",\"psych\"))\n\nlibrary(Hmisc)\nlibrary(psych)\nlibrary(colorspace)\nlibrary(corrgram)\nlibrary(ggplot2)\nlibrary(reshape2)\nlibrary(ggvis)\nlibrary(GGally)\n\nAthleticsData <- read.csv(\"./Cases/CFA with R/AthleticsData.csv\")\n\ndsA <- AthleticsData\n\ng <- ggplot(dsA,aes(x=PINBALL,y=BILLIARD))\ng <- g + geom_point()\ng\n\nrownames(dsA)\nds <- melt(dsA,id.vars=rownames(dsA),variable.name=\"sport\", value.name=\"performance\")\n\ng <- ggplot(dsA, aes(x=))\n\nplotmatrix(ds)\n\ndsHappy <- happy\n\n\nGGally::ggpairs(ds)\nhead(iris)\nGGally::ggpairs(iris, color=\"Species\")\n\nnames(dsA) \nhead(dsA)\n\nmtcars %>% \n  ggvis(~wt, ~mpg, \n        size := input_slider(10, 100),\n        opacity := input_slider(0, 1)\n  ) %>% \n  layer_points()",
+    "contents" : "# remove all elements for a clean start\nrm(list=ls(all=TRUE))\ncat(\"\\014\")\n\n# install.packages(c(\"Hmisc\",\"sem\",\"ggplot2\",\"colorspace\",\"corrgram\",\"plotrix\",\"psych\"))\n\nlibrary(Hmisc)\nlibrary(psych)\nlibrary(colorspace)\nlibrary(corrgram)\nlibrary(ggplot2)\nlibrary(reshape2)\nlibrary(ggvis)\nlibrary(GGally)\n\nAthleticsData <- read.csv(\"./Cases/CFA with R/AthleticsData.csv\")\n\ndsA <- AthleticsData\n\ng <- ggplot(dsA,aes(x=PINBALL,y=BILLIARD))\ng <- g + geom_point()\ng\n\nrownames(dsA)\nds <- melt(dsA,id.vars=rownames(dsA),variable.name=\"sport\", value.name=\"performance\")\n\ng <- ggplot(dsA, aes(x=))\n\nplotmatrix(ds)\n\ndsHappy <- happy\n\n\nGGally::ggpairs(ds)\nhead(iris)\nGGally::ggpairs(iris, color=\"Species\")\n\nnames(dsA) \nhead(dsA)\n\nmtcars %>% \n  ggvis(~wt, ~mpg, \n        size := input_slider(10, 100),\n        opacity := input_slider(0, 1)\n  ) %>% \n  layer_points()\n\ndata(package=\"psych\")\n\nds <- psych::sat.act\nhead(sat.act)\n# GGally::ggpairs(ds[,c(\"ACT\", \"SATV\",\"SATQ\")])\n\n# GGally::ggpairs(ds)\nds$genderF <- factor(ds$gender, levels=c(1,2), labels=c(\"Male\",\"Female\"))\nGGally::ggpairs(ds, color=\"genderF\")\n\n\nds[ ,c(\"ACT\", \"SATV\",\"SATQ\")]\n\nds[,\"ACT\"]",
     "created" : 1422900784805.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1322371482",
+    "hash" : "1128766244",
     "id" : "C6B4FAB5",
-    "lastKnownWriteTime" : 1422903966,
+    "lastKnownWriteTime" : 1422914899,
     "path" : "~/GitHub/psy533/Cases/sandbox/make fake data.R",
     "project_path" : "Cases/sandbox/make fake data.R",
     "properties" : {
