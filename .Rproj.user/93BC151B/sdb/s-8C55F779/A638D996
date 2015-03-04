@@ -1,0 +1,16 @@
+{
+    "contents" : "#### Setup ####\n\nrm(list=ls(all=TRUE))  #removes all objects from current environment\n\noptions(\"scipen\"=10, \"digits\"=2)\n\nsource(\"http://www.statpower.net/Content/312/R%20Stuff/Steiger%20R%20Library%20Functions.txt\")\n\ninstall.packages(\"psych\")  # installs package\ninstall.packages(\"corrgram\")\nlibrary(psych)             # loads for this session\nlibrary(corrgram)\n\n#### Data read ####\n\nAthleticData <- read.csv(\"http://www.statpower.net/Content/312/Homework/AthleticsData.csv\")\nstr(AthleticData)\ndim(AthleticData)\nclass(AthleticData)\nhead(AthleticData)\nnames(AthleticData)\n\nR <- cor(AthleticData)\n\ndsR <- as.data.frame(R)\n\n#### PCA by hand ####\n#        R        Correlation matrix\n#     F   F'      Gram-factor\n#  VD1/2 D1/2V'   Principal Components\n#     V D V'      Earnhart-Young decomposition\n#    Rv = cv      Eigenvalues and Eigenvectors\n\neigen <- eigen(R)\n\neigen\nstr(eigen)\neigen$values    # prints the $values that are part of object eigen\neigen$vectors\n\nV <- eigen$vectors\nD <- diag(eigen$values)\n\nRnew <- V %*% D %*% t(V)\n\nR - Rnew\n\nround(R - Rnew)\nall.equal(R, Rnew)\n\n\nF <- V %*% sqrt(D)\nF\n\nRnew2 <- F %*% t(F)\nall.equal(Rnew, Rnew2)\n\n#### PCA with Princomp ####\n\nprincipal(AthleticData, nfactors=3, rotate=\"none\")\n\n#### Create correlograms ####\n\ncorrgram::corrgram(R)\ncorrgram(R, upper.panel=panel.conf, lower.panel=panel.pie, order=TRUE)\n\n#### EFA with factanal()  ####\n\nfit.efa.2<- factanal(AthleticData, factors=2, rotation=\"none\")\nfit.efa.2\nfit.efa.3<- factanal(AthleticData, factors=3, rotation=\"none\")\nfit.efa.3\n\nprint(fit.efa.3, digits=2, cutoff=0)\n\nprint(fit.efa.3, digits=2, cutoff=0.2, sort=TRUE)\n\nfit.efa<- factanal(AthleticData, factors=2, rotation=\"varimax\")\n\nfit.efa<- factanal(AthleticData, factors=2, rotation=\"promax\")\n\n\n\n\n",
+    "created" : 1425502378592.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "292488931",
+    "id" : "A638D996",
+    "lastKnownWriteTime" : 1425502415,
+    "path" : "~/GitHub/psy533/Cases/EAF with R/EFA (done in class).R",
+    "project_path" : "Cases/EAF with R/EFA (done in class).R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

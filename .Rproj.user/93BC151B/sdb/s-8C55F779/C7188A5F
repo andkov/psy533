@@ -1,0 +1,17 @@
+{
+    "contents" : "#### SETUP ####\nrm(list=ls(all=TRUE)) #Clear out variables from previous runs.\noptions(\"scipen\"=10, \"digits\"=5) # control the decimal places in the output\n\n# Install packages if necessary\ninstall.packages(\"psych\")  \ninstall.packages(\"corrgram\") \n\n## load the packages\nlibrary(psych) # multipurpose for psychologist\nlibrary(corrgram) # for graphing correlation matrices\nlibrary(Hmisc)# multipurpose\nlibrary(sem) # structural equation modeling\nlibrary(reshape2) # data transformation\nlibrary(ggplot2) # general graphing\nlibrary(plotrix) # ploting matrix graphs\n\n# Please consult the website of James Steiger (www.statpower.net) for all materials pertaining to this demonstration. \n\n## load some custom functions\n# Useful function for multivariate stats\nsource(\"http://statpower.net/Content/312/R%20Stuff/Steiger%20R%20Library%20Functions.txt\")\n# Functions to assist you in FA and SEM\nsource(\"http://statpower.net/Content/312/R%20Stuff/AdvancedFactorFunctions.txt\")\n# Functions by Dirk Enzmann to aid promax rotation\nsource(\"http://statpower.net/Content/312/R%20Stuff/fa.promax.R\")\n# Load Athletic data directly from James Stieger's website\n\n#### Data prep ####\n\n# Many packages provide data for examples, to see availible data load the packages and execute the following:\ndata() # lists all availible datasets\ndata(Harman74.cor) # calling Harman74.cor into existence inside RStudio session\nR <- as.matrix(Harman74.cor[[1]]) # segregating the correlation matrix\ncolnames(R) # lists the names of the columns\nrow.names(R) # lists the names of the rows\nR # print\n\n# for more on the dataset see  Harman, H. H. (1976) Modern Factor Analysis, Third Edition Revised, University of Chicago Press, Table 7.4. ( http://books.google.ca/books?id=e-vMN68C3M4C&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=twopage&q&f=false , page 125)\n\n#### Data Explorations ####\ncorrgram(R)\ncorrgram(R,upper.panel=panel.conf,lower.panel=panel.pie, order = T)\ncorrgram(R,upper.panel=panel.conf,lower.panel=panel.pie, order = F)\n\n\n#### Scree plot ####\n\neigen(R)$values # examine eigenvalues directly\n# plot the eigen values\nScree.Plot(R, main=\"Scree plot of 24 Psychological variables (n=145)\")\n\nFA.Stats(R, n.factors=1:10, n.obs=145, main=\"RMSEA plot of 24 Psych Variables (n=145)\")\n\n\n# NOTE : The RMSEA index can be thought of roughly as a root mean square standardized residual. # values above .10 indicate an inadequate fit, \n# values below .05 indicate a very good fit.\n# Point estimates below .01 indicate an outstanding fit, and are seldom obtained.\n# CONFIDENCE INTERVALS must be interpreted, not the point estimates!!!\n# look for the point estimage whose confidence interval includes zero (indicating a failure to reject the null hypothesis of perfect fit, i.e., RMSEA = 0, at the 0.05 level).\n\n\n\n\n# \nf1 <- row.names(R)[1:4]\nf2 <- row.names(R)[5:9]\nf3 <- row.names(R)[10:13]\nf4 <- row.names(R)[14:19]\nf5 <- row.names(R)[20:24]\n\n\n\n",
+    "created" : 1425502438233.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "63103299",
+    "id" : "C7188A5F",
+    "lastKnownWriteTime" : 1425505812,
+    "path" : "~/GitHub/psy533/Cases/Advanced EFA in R/Advanced EFA.R",
+    "project_path" : "Cases/Advanced EFA in R/Advanced EFA.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
