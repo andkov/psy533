@@ -112,11 +112,13 @@ out <- MLFA(Correlation.Matrix = R, n.factors=4, n.obs=360) # conduct MLFA and c
 Loadings(out, cutoff=.3, num.digits=2) 
 
 #### Note on RMSEA ####
-#### NOTE : The RMSEA index can be thought of roughly as a root mean square standardized residual. # values above .10 indicate an inadequate fit, 
+#### NOTE : The RMSEA index can be thought of roughly as a root mean square standardized residual. 
+#### values above .10 indicate an inadequate fit, 
 #### values below .05 indicate a very good fit.
 #### Point estimates below .01 indicate an outstanding fit, and are seldom obtained.
 #### CONFIDENCE INTERVALS must be interpreted, not the point estimates!!!
-#### Look for the point estimage whose confidence interval includes zero (indicating a failure to reject the null hypothesis of perfect fit, i.e., RMSEA = 0, at the 0.05 level).
+#### Look for the point estimate whose confidence interval includes zero 
+####    (indicating a failure to reject the null hypothesis of perfect fit, i.e., RMSEA = 0, at the 0.05 level).
 
 
 #### Note on MLFA ####
