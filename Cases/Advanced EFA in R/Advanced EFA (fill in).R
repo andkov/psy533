@@ -28,30 +28,30 @@ source("http://statpower.net/Content/312/R%20Stuff/fa.promax.R")
 
 #### Data prep ####
 
-# Many packages provide data for examples, to see availible data load the packages and execute the following:
-data() # lists all availible datasets
-data(Harman74.cor) # calling Harman74.cor into existence inside RStudio session
-R <- as.matrix(Harman74.cor[[1]]) # segregating the correlation matrix
-colnames(R) # lists the names of the columns
-row.names(R) # lists the names of the rows
-R # print
+
+  # lists all availible datasets in the enviroment
+  # calling Harman74.cor into existence inside RStudio session
+  # segregating the correlation matrix
+  # lists the names of the columns
+  # lists the names of the rows
+  # print the correlation matrix
 
 # for more on the dataset see  Harman, H. H. (1976) Modern Factor Analysis, Third Edition Revised, University of Chicago Press, Table 7.4. ( http://books.google.ca/books?id=e-vMN68C3M4C&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=twopage&q&f=false , page 125)
 
 #### Data Explorations ####
-corrgram(R) # get the basic correlogram
-corrgram(R,upper.panel=panel.conf,lower.panel=panel.pie) # customize panels
-corrgram(R,upper.panel=panel.conf,lower.panel=panel.pie, order = T) # sort by PCA
+ 
+ # get the basic correlogram
+ # customize panels
+ # sort by PCA
 
 
 #### FA of 24 Psychological Variables ####
 
-eigen(R)$values # examine eigenvalues directly
-Scree.Plot(R, main="Scree plot of 24 Psychological variables (n=145)") # plot the eigen values
-FA.Stats(R, n.factors=1:10, n.obs=145, main="RMSEA plot of 24 Psych Variables (n=145)") # Request Chi-Square and RMSEA stats
-
-out <- MLFA(Correlation.Matrix = R, n.factors=4, n.obs=145) # conduct MLFA and collect all rotations in a single object
-Loadings(out, cutoff=.3, num.digits=2) 
+ # examine eigenvalues directly
+ # plot the eigen values
+ # Request Chi-Square and RMSEA stats
+ # conduct MLFA and collect all rotations in a single object
+ # print and examine factor loadings
 
 #### Note on RMSEA ####
 #### NOTE : The RMSEA index can be thought of roughly as a root mean square standardized residual. # values above .10 indicate an inadequate fit, 
@@ -66,28 +66,26 @@ Loadings(out, cutoff=.3, num.digits=2)
 #### Uncorrelated Factors: Unrotated - Varimax - Quartimin - Bifactor  
 ####   Correlated Factors:           - Promax              - BifactorOblique 
 
-
-out$Unrotated # request only Unrotated
-out$Varimax # request only Varimax roation
-out$Promax # request only Promax
-
+ # request only Unrotated
+ # request only Varimax roation
+ # request only Promax
 
 
 #### FA of Thurstone data ####
-data(Thurstone) # call a dataset "Thurstone" into existence inside RStudio session
-R.2 <- as.matrix(Thurstone) # save it as a correlation matrix called R.2
-R.2 # print R.2
 
-# explore the correlations
-corrgram(R,upper.panel=panel.conf,lower.panel=panel.pie, order = T) # ordered correlogram
-corrgram(R,upper.panel=panel.conf,lower.panel=panel.pie, order = F) # unordered correlogram
+ # call a dataset "Thurstone" into existence inside RStudio session
+ # save it as a correlation matrix called R.2
+ # print R.2
 
+## Explore the correlations graphically
+ 
+ # ordered correlogram
+ # unordered correlogram
 
-Scree.Plot(R.2, main="Scree plot of Thurstone data (n=213)") # plot the eigen values
-
-FA.Stats(R.2, n.factors=1:4, n.obs=213, main="RMSEA plot of 24 Psych Variables (n=145)") # Find ML solutions and rotations
-out.2 <- MLFA(Correlation.Matrix = R.2, n.factors=3, n.obs=213) # Conduct MLFA
-Loadings(out.2, cutoff=.3, num.digits=2) # print and examine factor loadings
+ # Plot the eigen values in a scree plot
+ # Request Chi-Square and RMSEA stats
+ # Conduct MLFA and collect all rotations in a single object
+ # print and examine factor loadings
 
 
 
