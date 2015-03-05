@@ -62,8 +62,8 @@ ds <- na.omit(ds)
   
 
 # assing descriptive names to the variables
-varNames <- paste("var",1:19)
-# varNames <- c(“activity”,”anxious”,”quick”,”noreason”,”backgrnd”,”cheerful”,”late”,”tired”,”lively”,”quickly”,
+#varNames <- paste("var",1:19)
+varNames <- c(“activity”,”anxious”,”quick”,”noreason”,”backgrnd”,”cheerful”,”late”,”tired”,”lively”,”quickly”,
                 ”thoughts”,”reserved”,”sensitiv”,”restless”,”nosleep”,”keepself”,”nervous”,”joke”,”worry") 
 
 
