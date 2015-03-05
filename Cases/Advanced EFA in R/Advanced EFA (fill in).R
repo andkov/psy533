@@ -15,7 +15,7 @@ library(reshape2) # data transformation
 library(ggplot2) # general graphing
 library(plotrix) # ploting matrix graphs
 
-# Please consult the website of James Steiger (www.statpower.net) for all materials pertaining to this demonstration. ( See Psychology 312)
+# Please consult the website of James Steiger (www.statpower.net) for all materials pertaining to this demonstration. ( See Psychology 312). For this particular demonstration, please follow his handout on "Advanced EFA" ( http://statpower.net/Content/312/Handout/Advanced%20Exploratory%20Factor%20Analysis%20in%20R.pdf ) and the lecture on "Practical EFA" ( http://statpower.net/Content/319SEM/Lecture%20Notes/PracticalEFA.pdf )
 
 ## load some custom functions
 # Useful function for multivariate stats
@@ -27,7 +27,6 @@ source("http://statpower.net/Content/312/R%20Stuff/fa.promax.R")
 # Load Athletic data directly from James Stieger's website
 
 #### Data prep ####
-
 
   # lists all availible datasets in the enviroment
   # calling Harman74.cor into existence inside RStudio session
@@ -43,7 +42,6 @@ source("http://statpower.net/Content/312/R%20Stuff/fa.promax.R")
  # get the basic correlogram
  # customize panels
  # sort by PCA
-
 
 #### FA of 24 Psychological Variables ####
 
