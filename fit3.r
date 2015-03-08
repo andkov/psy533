@@ -1,0 +1,21 @@
+Factor1 -> Sentences, Theta1, 0.8155
+Factor1 -> Vocabulary, Theta2, 0.8104
+Factor1 -> Sent.Completion, Theta3, 0.7657
+Factor1 -> 4.Letter.Words, Theta4, 0.5838
+Factor1 -> Suffixes, Theta5, 0.5166
+Factor1 -> Letter.Series, Theta6, 0.7396
+Factor1 -> Pedigrees, Theta7, 0.7016
+Factor1 -> Letter.Group, Theta8, 0.6313
+Factor1 -> First.Letters, Theta9, 0.5845
+Factor2 -> 4.Letter.Words, Theta10, 0.533
+Factor2 -> Suffixes, Theta11, 0.462
+Factor2 -> First.Letters, Theta12, 0.6248
+Factor3 -> Sentences, Theta13, 0.3969
+Factor3 -> Vocabulary, Theta14, 0.4214
+Factor3 -> Sent.Completion, Theta15, 0.3819
+Factor3 -> Letter.Series, Theta16, -0.4039
+Factor3 -> Letter.Group, Theta17, -0.3466
+Factor1 <-> Factor1, NA, 1
+Factor2 <-> Factor2, NA, 1
+Factor3 <-> Factor3, NA, 1
+

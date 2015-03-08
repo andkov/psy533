@@ -4,7 +4,7 @@
         "filePatterns" : [
         ],
         "path" : "~/GitHub/psy533",
-        "query" : "sas7bdat",
+        "query" : "levels=",
         "regex" : false
     }
 }
