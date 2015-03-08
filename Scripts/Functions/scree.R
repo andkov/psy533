@@ -2,7 +2,7 @@ ds<-as.data.frame(t(Dplus))
 ds$pc<-c(1:ncol(Dplus))
 
 # Scree
-p2<-ggplot(ds, aes(x=pc,y=eigens))+
+p2 <- ggplot(ds, aes(x=pc,y=eigens))+
   ggtitle(title2)+
   geom_abline(intercept=1,slope=0,color="red",linetype="dashed")+
   geom_line()+
