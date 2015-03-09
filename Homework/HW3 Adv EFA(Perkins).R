@@ -27,44 +27,51 @@ source("http://statpower.net/Content/312/R%20Stuff/fa.promax.R")
 
 
 pathHome <- getwd()
-pathFile <- file.path(pathHome,"Homework/HW3.txt")
-pathVarnames <- file.path(pathHome,"Homework/varnames.txt")
+pathFile <- file.path(pathHome,"Homework/LongPerkinsTime1SCI.csv")
 
 #### Data prep ####
 
-ds <- read.table(pathFile, as.is=T) # read in the data
+ds <- read.table(pathFile, sep=",", header=T) # read in the data
 head(ds) # print the first few lines
 str(ds) # examine the structure of the object
 dim(ds)
 nrow(ds)
 
-# convert "." into missing values 
-ds[ds == "."] <- NA
-ds[ds == "No"] <- 0
-ds[ds == "Yes"] <- 1
 
-
-View(ds)
-# # convert into factors and assign labels
-# noyesLevels<- c(0,1) # what numeric values should represent levels
-# noyesLabels<- c("NO", "YES") # what character strings should represent levels
-# # loop through all  variable names
-# for(i in  colnames(ds)){
-#   ds[,i]<- factor(ds[,i], levels = noyesLevels,labels = noyesLabels)
-# }
-
+# convert variables back into numeric
 for(i in  colnames(ds)){
   ds[,i]<- as.numeric(ds[,i])
 }
 
+
 # subset the data to keep only the row without any missing values
 ds <- na.omit(ds)
-  
 
-# passing descriptive names to the variables
-#varNames <- paste("var",1:19)
-varNames <- c(“activity”,”anxious”,”quick”,”noreason”,”backgrnd”,”cheerful”,”late”,”tired”,”lively”,”quickly”,
-                ”thoughts”,”reserved”,”sensitiv”,”restless”,”nosleep”,”keepself”,”nervous”,”joke”,”worry") 
+
+##  Data originated from the following questionnaire :
+# I am going to read some things that people might say about their block. Each time I read one of these
+# statements, please tell me if it is mostly true or mostly false about your block simply by saying "true" (2=MORE SOC) or "false" (1=LESS SOC).
+
+# SCI1 - I think my block is a good place for me to live.
+# SCI2 - People on this block do not share the same values. (reverse)
+# SCI3 - My neighbors and I want the same things from the block.
+# SCI4 - I can recognize most of the people who live on my block.
+# SCI5 - I feel at home on this block.
+# SCI6 - Very few of my neighbors know me. (reverse)
+# SCI7 - I care about what my neighbors think of my actions.
+# SCI8 - I have almost no influence over what this block is like. (reverse)
+# SCI9 - If there is a problem on this block people who live here can get it solved.
+# SCI10 - It is very important to me to live on this particular block.
+# SCI11 - People on this block generally don't get along with each other. (reverse)
+# SCI12 - I expect to live on this block for a long time.
+#
+# NOTE: Items 2,6,8,11 are reverse coded! This means that the loading on this item may
+# be negative on the designated factor.
+
+
+# assigning descriptive names to the variables
+
+# varNames <- c(“varname1", "varname2", ... , "varname12")  # Andrea, please edit
 
 
 #### Examine correlations ####
@@ -91,14 +98,14 @@ corrgram(R,upper.panel=panel.conf,lower.panel=panel.pie, order = T)
 # list the numerical values of the eignevalues to be examined directly
 eigen(R)$values
 # Use Scree.Plot() function to request the graph of eigenvalues, add a descriptive title
-Scree.Plot(R, main="Scree plot of 19 Psychological variables (n=360)") # plot the eigen values
+Scree.Plot(R, main="Scree plot of Sence of Community (SOC) variables (n=575)") # plot the eigen values
 
 #### Question 2 ####
 # How many factors does the scree plot suggest to extract? Explain your reasoning 
 # A: 3, 4, or 5, depending on the rules you adopt in decision making
 
 # Use FA.Stats() function to request Chi-Square and RMSEA statistics, add a descriptive title
-FA.Stats(R, n.factors=1:10, n.obs=360, main="RMSEA plot of 19 Psych Variables (n=360)") # Request Chi-Square and RMSEA stats
+FA.Stats(R, n.factors=1:5, n.obs=575, main="RMSEA plot of Sence of Community (SOC) variables (n=575)") # Request Chi-Square and RMSEA stats
 
 #### Question 3 ####
 # How many factors does the Chi-Square criteria suggest to extract? Explain your reasoning 
@@ -108,8 +115,19 @@ FA.Stats(R, n.factors=1:10, n.obs=360, main="RMSEA plot of 19 Psych Variables (n
 # How many factors does the RMSEA criteria suggest to extract? Explain your reasoning 
 # A: 4, with 4 factors the confidence interval for the point estimate includes zero
 
-out <- MLFA(Correlation.Matrix = R, n.factors=4, n.obs=360) # conduct MLFA and collect all rotations in a single object
+out <- MLFA(Correlation.Matrix = R, n.factors=4, n.obs=575) # conduct MLFA and collect all rotations in a single object
 Loadings(out, cutoff=.3, num.digits=2) 
+
+
+#### Question 5 ####
+# Does examining the solutions for 3, 4, and 5 factors change what factors you can see?  (Use MLFA() function to study three different sets of solutions)
+
+out.3 <- MLFA(Correlation.Matrix = R, n.factors=3, n.obs=575) 
+out.4 <- MLFA(Correlation.Matrix = R, n.factors=4, n.obs=575) 
+out.5 <- MLFA(Correlation.Matrix = R, n.factors=5, n.obs=575) 
+Loadings(out, cutoff=.3, num.digits=2) 
+
+
 
 #### Note on RMSEA ####
 #### NOTE : The RMSEA index can be thought of roughly as a root mean square standardized residual. 
