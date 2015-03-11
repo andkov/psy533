@@ -6,6 +6,7 @@ library(sem)
 library(corrgram)
 library(psych)
 library(sem)
+library(ggplot2)
 
 # Please consult the website of James Steiger (www.statpower.net) for all materials pertaining to this demonstration. 
 
@@ -149,15 +150,14 @@ Dplus<-rbind(eigens,explained,cumulative)
 #      Rv = cv          Eigenvalues and Eigenvectors  
 
 ######   Producing graphs   # Ctrl+Alt+E - Run from line to end
-pathScree<-file.path(getwd(),"R Support Materials","functions","scree.R")
-pathPattern<-file.path(getwd(),"R Support Materials","functions","factor pattern.R")
+pathScree<-file.path(getwd(),"Scripts/Functions/scree.R")
+pathPattern<-file.path(getwd(),"Scripts/Functions/factor pattern.R")
 
 # palette <- choose_palette() # run to initiate a dialogue to choose palette
 # colors<-palette(2) # assign the vector containing the N colorcodes 
 colors<- c("darksalmon" ,"lightskyblue")
                                 #choose where the file will be stored
-pathImageOut<-file.path(getwd(), 
-"R Support Materials/Exploratory Factor Analysis with R/principal")
+pathImageOut<-file.path(getwd(), "temp")
 pattern<-F   # matrix for the factor pattern
 drawing<- "F"  # name of file with graph
 
