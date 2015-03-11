@@ -42,3 +42,9 @@ cfa2.model <- specifyModel("./Cases/CFA with R/Class Demo/CFA2.txt")
 cfa2.fit <- sem(cfa2.model, R, 1000)
 summary(cfa2.fit)
 modIndices(cfa2.fit)
+
+cfa3.model <- specifyModel("./Cases/CFA with R/Class Demo/CFA3.txt")
+cfa3.fit <- sem(cfa3.model, R, 1000)
+summary(cfa3.fit)
+modIndices(cfa3.fit)
+
