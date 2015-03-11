@@ -5,6 +5,9 @@ options("scipen"=10, "digits"=3) # control the decimal places in the output
 # Install packages if necessary
 # install.packages("psych")  
 # install.packages("corrgram") 
+# install.packages("plotrix") 
+# install.packages("sem") 
+# install.packages("Hmisc") 
 
 ## load the packages
 library(psych) # multipurpose for psychologist
@@ -44,7 +47,7 @@ ds[ds == "No"] <- 0
 ds[ds == "Yes"] <- 1
 
 
-View(ds)
+# View(ds)
 # # convert into factors and assign labels
 # noyesLevels<- c(0,1) # what numeric values should represent levels
 # noyesLabels<- c("NO", "YES") # what character strings should represent levels
@@ -62,11 +65,13 @@ ds <- na.omit(ds)
   
 
 # passing descriptive names to the variables
-#varNames <- paste("var",1:19)
-varNames <- c(“activity”,”anxious”,”quick”,”noreason”,”backgrnd”,”cheerful”,”late”,”tired”,”lively”,”quickly”,
-                ”thoughts”,”reserved”,”sensitiv”,”restless”,”nosleep”,”keepself”,”nervous”,”joke”,”worry") 
 
+# varNames <- c("activity", "anxious", "quick", "noreason", "backgrnd", "cheerful", "late", "tired", "lively", "quickly", "thoughts", "reserved", "sensitive", "restless", "nosleep", "keepself", "nervous", "joke", "worry") 
 
+varNames <- c("ACTIVITY", "anxious", "QUICK", "noreason", "BACKGROUND", "cheerful", "late", "tired", "LIVELY", "QUICKLY", "THOUGHTS", "RESERVED", "sensitive", "restless", "nosleep", "KEEPSELF", "nervous", "JOKE", "worry") 
+
+names(ds) <- varNames
+head(ds)
 #### Examine correlations ####
 
 # compute correlation matrix
@@ -88,7 +93,7 @@ corrgram(R,upper.panel=panel.conf,lower.panel=panel.pie, order = T)
 
 #### Conduct factor analysis ####
 
-# list the numerical values of the eignevalues to be examined directly
+# list the numerical values of the eigenvalues to be examined directly
 eigen(R)$values
 # Use Scree.Plot() function to request the graph of eigenvalues, add a descriptive title
 Scree.Plot(R, main="Scree plot of 19 Psychological variables (n=360)") # plot the eigen values
@@ -108,8 +113,13 @@ FA.Stats(R, n.factors=1:10, n.obs=360, main="RMSEA plot of 19 Psych Variables (n
 # How many factors does the RMSEA criteria suggest to extract? Explain your reasoning 
 # A: 4, with 4 factors the confidence interval for the point estimate includes zero
 
-out <- MLFA(Correlation.Matrix = R, n.factors=4, n.obs=360) # conduct MLFA and collect all rotations in a single object
-Loadings(out, cutoff=.3, num.digits=2) 
+out.4 <- MLFA(Correlation.Matrix = R, n.factors=4, n.obs=360) # conduct MLFA and collect all rotations in a single object
+Loadings(out.4, cutoff=.3, num.digits=2) 
+
+
+out.2 <- MLFA(Correlation.Matrix = R, n.factors=2, n.obs=360) # conduct MLFA and collect all rotations in a single object
+Loadings(out.2, cutoff=.3, num.digits=2) 
+
 
 #### Note on RMSEA ####
 #### NOTE : The RMSEA index can be thought of roughly as a root mean square standardized residual. 
