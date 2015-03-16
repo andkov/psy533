@@ -1,0 +1,16 @@
+{
+    "contents" : "rm(list=ls(all=TRUE)) #Clear out variables from previous runs.\n######### Set Up Working Directory!!\nlibrary(Hmisc)\nlibrary(sem)\nlibrary(corrgram)\nsource('http://www.statpower.net/Content/312/R Stuff/AdvancedFactorFunctionsV1.04.r')\nAthleticsData <- read.csv(file.path(getwd(),\"R Support Materials/datasets\",\"AthleticsData.csv\"))\nattach(AthleticsData)\n\nAD.R <- cor(AthleticsData)\nround(cor(AthleticsData),2)\ncorrgram(x=AD.R,order=TRUE,\n         main=\"Correlogram of Athletic Data\",\n         upper.panel=panel.pie,\n         lower.panel=panel.shade\n)\n\n# short- and long-hand code of QuickCFA\npureCFA.fit <- QuickCFA(AD.R,3,1000, \"AD_QuickCFA\", c(\"Hand-Eye\",\"Endurance\",\"Strength\"))\n# QuickCFA(R=AD.R,n.factors=3,n.obs=1000, model.name=\"AD_QuickCFA\",\n#          factor.names=c(\"Hand-Eye\",\"Endurance\",\"Strength\"),\n#          cutoff=0.30, factor.correlations=FALSE,reference.indicators=FALSE)\n\nsummary(pureCFA.fit)\nGetPattern(pureCFA.fit)\n\nGetPrettyPattern(pureCFA.fit)\nRMSEA(pureCFA.fit)\nCheckMod(pureCFA.fit)\nfit2 <- UseMod(pureCFA.fit)\nCheckMod(fit2)\nfit3 <- UseMod(fit2)\nRMSEA(fit3)\nGetPrettyPattern(fit3)\n\nfit <- QuickEFAtoCFA(AD.R,3,1000)\nGetPrettyPattern(fit)\nfit <- QuickEFAtoCFA(AD.R,3,1000, cov.matrix=FALSE)\nGetPrettyPattern(fit)\n\nCheckMod(fit)\nfit <- UseMod(fit)\nGetPrettyPattern(fit)\n\nR <- as.matrix(Harman74.cor$cov)\nfit <- QuickJoreskog(R,4,145)\nGetPrettyPattern(fit)\n\ndebug(QuickJoreskog)\n",
+    "created" : 1426526866487.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "590282899",
+    "id" : "8BB0FAF6",
+    "lastKnownWriteTime" : 1425315790,
+    "path" : "~/GitHub/psy533/Cases/Advanced CFA in R/AdvancedCFACode_myrepliction.r",
+    "project_path" : "Cases/Advanced CFA in R/AdvancedCFACode_myrepliction.r",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
