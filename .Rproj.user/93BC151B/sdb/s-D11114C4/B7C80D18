@@ -1,0 +1,16 @@
+{
+    "contents" : "rm(list=ls(all=TRUE)) #Clear out variables from previous runs.\n######### Set Up Working Directory!!\nlibrary(Hmisc)\nlibrary(sem)\nsource(\"http://statpower.net/Content/312/R%20Stuff/AdvancedFactorFunctions.txt\")\nAthleticsData <- spss.get(\"AthleticsData.sav\")\nattach(AthleticsData)\nAD.R <- cor(AthleticsData)\npureCFA.fit <- QuickCFA(AD.R,3,1000,\"pureCFA\",\n                        c(\"HandEye\",\"Endurance\",\"Strength\"))\nsummary(pureCFA.fit)\nGetPattern(pureCFA.fit)\nGetPrettyPattern(pureCFA.fit)\nRMSEA(pureCFA.fit)\nCheckMod(pureCFA.fit)\nfit2 <- UseMod(pureCFA.fit)\nCheckMod(fit2)\nfit3 <- UseMod(fit2)\nRMSEA(fit3)\nGetPrettyPattern(fit3)\n\nfit <- QuickEFAtoCFA(AD.R,3,1000)\nGetPrettyPattern(fit)\nfit <- QuickEFAtoCFA(AD.R,3,1000, cov.matrix=FALSE)\nGetPrettyPattern(fit)\n\nCheckMod(fit)\nfit <- UseMod(fit)\nGetPrettyPattern(fit)\n\nR <- as.matrix(Harman74.cor$cov)\nfit <- QuickJoreskog(R,4,145)\nGetPrettyPattern(fit)\n\ndebug(QuickJoreskog)\n",
+    "created" : 1426526865664.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3212839405",
+    "id" : "B7C80D18",
+    "lastKnownWriteTime" : 1425315790,
+    "path" : "~/GitHub/psy533/Cases/Advanced CFA in R/AdvancedCFACode.r",
+    "project_path" : "Cases/Advanced CFA in R/AdvancedCFACode.r",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
