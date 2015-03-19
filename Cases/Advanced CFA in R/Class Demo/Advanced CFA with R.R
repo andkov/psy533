@@ -14,6 +14,8 @@ library(sem) # structural equation modeling
 
 ## For the demonstraction of factor analysis with 'sem' package see Steiger's tutorial entitled "CFA with R" ( http://statpower.net/Content/312/Handout/Confirmatory%20Factor%20Analysis%20with%20R.pdf )
 
+## For the demonstration of FA with custom functions see Steiger's tutorial entitled "Advanced CFA with R" (   http://statpower.net/Content/312/Handout/Advanced%20Confirmatory%20Factor%20Analysis%20in%20R.pdf )
+
 ## For detailed discussion of 'sem' package see John Fox paper "Structural Equation Modeling in R with the sem Package" ( http://socserv.mcmaster.ca/jfox/Books/Companion/appendix/Appendix-SEMs.pdf )
 
 ## For 'sem' package documentation see  http://cran.r-project.org/web/packages/sem/sem.pdf  or  http://www.rdocumentation.org/packages/sem 
@@ -44,36 +46,58 @@ AthleticsData <- read.csv("http://statpower.net/Content/312/Homework/AthleticsDa
 
 R<-cor(AthleticsData) # correlation matrix R of variables in AthleticsData
 R
-
-
+round(cor(AthleticsData),2)
+corrgram(x=R,order=TRUE,
+         main="Correlogram of Athletic Data",
+         upper.panel=panel.pie,
+         lower.panel=panel.shade)
 
 ## selection of availible fit/information indices
 # opt <- options(fit.indices = c("GFI", "AGFI", "RMSEA", "NFI", "NNFI","CFI", "RNI", "IFI", "SRMR", "AIC", "AICc", "BIC", "CAIC"))
 opt <- options(fit.indices= c("GFI","RMSEA"))
-standardizedCoefficients(cfa1.fit) # a cleaner print of coefficients than summary()
+
 
 #### 1. Pure Confirmatory Analsyis ####
-cfa1.model <- specifyModel("./Cases/CFA with R/Class Demo/CFA1.txt")
-cfa1.fit <- sem(cfa1.model, R, 1000, opt)
-summary(cfa1.fit, opt)
-modIndices(cfa1.fit)
+FNames <- c("Hand-Eye","Endurance","Strength")
 
-#### 2. "Confirm and Update" Approach 
-cfa2.model <- specifyModel("./Cases/CFA with R/Class Demo/CFA2.txt")
-cfa2.fit <- sem(cfa2.model, R, 1000)
-summary(cfa2.fit, opt)
-modIndices(cfa2.fit)
+# orThogonal = factors are not correlated (default)
+pureCFA.fit.T <- QuickCFA(R=R,n.factors=3, n.obs = 1000, factor.names = FNames )
+summary(pureCFA.fit.T, opt)
+GetPattern(pureCFA.fit.T)
+GetPrettyPattern(pureCFA.fit.T)
+RMSEA(pureCFA.fit.T)
 
-cfa3.model <- specifyModel("./Cases/CFA with R/Class Demo/CFA3.txt")
-cfa3.fit <- sem(cfa3.model, R, 1000)
-summary(cfa3.fit, opt)
-modIndices(cfa3.fit)
+# obliQue = factors are allowed to correlate
+pureCFA.fit.Q <- QuickCFA(R=R,n.factors=3, n.obs = 1000, factor.names = FNames, factor.correlations = TRUE)
+summary(pureCFA.fit.Q, opt)
+GetPattern(pureCFA.fit.Q)
+GetPrettyPattern(pureCFA.fit.Q)
+RMSEA(pureCFA.fit.Q)
 
-cfa4.model <- specifyModel("./Cases/CFA with R/Class Demo/CFA4.txt")
-cfa4.fit <- sem(cfa4.model, R, 1000)
-summary(cfa4.fit, opt)
-modIndices(cfa4.fit)
+# Check and use modification indices
+modIndices(pureCFA.fit.T) # print all, not all are legal though
+CheckMod(pureCFA.fit.T) # print the largest legal modification index
+CheckMod(pureCFA.fit.T, loadings.only=FALSE) # prinet largest modIndixes, regardless of legality
 
-#### 3. The "Exploratory-Confirmatory" Approach
+fit.2 <- UseMod(pureCFA.fit.T) # update  the fit object with the largest (legal) modIndex
+RMSEA(fit.2)
+GetPrettyPattern(fit.2)
+
+
+CheckMod(fit.2)
+fit.3 <- UseMod(fit.2)
+RMSEA(fit.3)
+GetPrettyPattern(fit.3)
+summary(fit.3)[c(1:7)]
+
+#### 2. CFA from EFA ####
+fromEFA.fit <- QuickEFAtoCFA(R=R, n.factors = 3, n.obs = 1000, rotation = "Varimax")
+summary(fromEFA.fit)
+GetPrettyPattern(fromEFA.fit)
+
+#### 3. "Confirm and Update" Approach 
+
+
+#### 4. The "Exploratory-Confirmatory" Approach
 
 
