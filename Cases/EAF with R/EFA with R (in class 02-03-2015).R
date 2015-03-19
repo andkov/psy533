@@ -3,11 +3,16 @@
 rm(list=ls(all=TRUE)) # removes all objects from the current evironment
 options("scipen"=10, "digits"=2)
 
+#### Custom functions ####
 source("http://statpower.net/Content/312/R%20Stuff/Steiger%20R%20Library%20Functions.txt")
+# Functions to assist you in FA and SEM
+source("http://statpower.net/Content/312/R%20Stuff/AdvancedFactorFunctions.txt")
+# Functions by Dirk Enzmann to aid promax rotation
+source("http://statpower.net/Content/312/R%20Stuff/fa.promax.R")
 
 
-install.packages("psych")
-install.packages("corrgram")
+# install.packages("psych")
+# install.packages("corrgram")
 library(psych)
 library(corrgram)
 
