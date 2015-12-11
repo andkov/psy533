@@ -54,7 +54,7 @@ standardizedCoefficients(cfa1.fit) # a cleaner print of coefficients than summar
 
 #### 1. Pure Confirmatory Analsyis ####
 cfa1.model <- specifyModel("./Cases/CFA with R/Class Demo/CFA1.txt")
-cfa1.fit <- sem(cfa1.model, R, 1000, opt)
+cfa1.fit <- sem(cfa1.model, R, 1000)
 summary(cfa1.fit, opt)
 modIndices(cfa1.fit)
 

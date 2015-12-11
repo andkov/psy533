@@ -1,0 +1,17 @@
+{
+    "contents" : "## Factor 1 -- Endurance\nEndurance -> X.1500M, theta01, NA\nEndurance -> X.2KROW, theta02, NA\nEndurance -> X.12MINTR,theta03, NA\n## Factor 2 -- Strength\nStrength -> BENCH, theta04, NA\nStrength -> CURL, theta05, NA\nStrength -> MAXPUSHU, theta06, NA\n## Factor 3 -- Hand-Eye Coordination\nHand-Eye -> PINBALL, theta07, NA\nHand-Eye -> BILLIARD, theta08, NA\nHand-Eye -> GOLF, theta09, NA\n## Unique Variances\nX.1500M <-> X.1500M, theta10, NA\nX.2KROW <-> X.2KROW, theta11, NA\nX.12MINTR <-> X.12MINTR, theta12, NA\nBENCH <-> BENCH, theta13, NA\nCURL <-> CURL, theta14, NA\nMAXPUSHU <-> MAXPUSHU, theta15, NA\nPINBALL <-> PINBALL, theta16, NA\nBILLIARD <-> BILLIARD, theta17, NA\nGOLF <-> GOLF, theta18, NA\n## Factor Variances fixed at 1\nEndurance <-> Endurance, NA, 1\nStrength <-> Strength, NA, 1\nHand-Eye <-> Hand-Eye, NA, 1 \n\nEndurance -> MAXPUSHU, theta19, NA\nStrength -> X.2KROW, theta20, NA\nStrength -> X.1500M, theta21, NA",
+    "created" : 1427736452760.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "901871214",
+    "id" : "97B94B7C",
+    "lastKnownWriteTime" : 1426115091,
+    "path" : "~/GitHub/psy533/Cases/CFA with R/Class Demo/CFA4.txt",
+    "project_path" : "Cases/CFA with R/Class Demo/CFA4.txt",
+    "properties" : {
+    },
+    "relative_order" : 0,
+    "source_on_save" : false,
+    "type" : "text"
+}
