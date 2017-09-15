@@ -3,7 +3,7 @@ Multivariate Methods
 
 The repository accompanies a graduate course on multivariate methods (PSY-533) at the University of Victoria
 
-[ShinyEFA](http://glimmer.rstudio.com/wibeasley/ShinyEFA/) is a web application created with [R](http://cran.rstudio.com/) and [Shiny](http://www.rstudio.com/shiny/). It is created and maintained by [Andrey Koval](http://www.statcanvas.net) (University of Victoria) and [Will Beasley](http://www.linkedin.com/profile/view?id=48089881&trk=nav_responsive_tab_profile) (University of Oklahoma Health Sciences Center). 
+[ShinyEFA](http://glimmer.rstudio.com/wibeasley/ShinyEFA/) is a web application created with [R](http://cran.rstudio.com/) and [Shiny](http://www.rstudio.com/shiny/). It is created and maintained by [Andriy Koval](http://www.statcanvas.net) (University of Victoria) and [Will Beasley](http://www.linkedin.com/profile/view?id=48089881&trk=nav_responsive_tab_profile) (University of Oklahoma Health Sciences Center). 
 
 ![atlas](/images/atlas_small.png)
 
